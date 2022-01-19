@@ -13,5 +13,9 @@ const GlobalStyle = createGlobalStyle`
         color: #0c193a;
         font-family: sans-serif;
     }
+    p {
+        font-family: sans-serif;
+        
+    }
 `
 export default GlobalStyle;
