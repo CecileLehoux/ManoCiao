@@ -11,7 +11,7 @@ const Header = () => (
 
 const Nav = styled.nav`
   padding-top: .5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

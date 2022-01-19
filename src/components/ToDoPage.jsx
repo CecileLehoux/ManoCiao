@@ -2,29 +2,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function InsideOutsidePage() {
+function ToDoPage() {
 
     return (
         <>
             <TextHolder>
-                <h1>Et si vous réalisiez votre projet à la Mano ?</h1>
-                <h2>Quel est votre projet ?</h2>
+                <h1>Que souhaitez-vous faire ?</h1>
             </TextHolder>
             <ChoicesContainer>
                     <ChoiceHolder>
-                        <h3>Extérieur</h3>
+                        <h3>#Rénovation</h3>
                         <IconHolder>
-                            <img src='assets/potExterieur.png' alt='exterieur' width='65%' />
+                            <img src='assets/PinceauIcone.png' alt='exterieur' width='65%' />
                         </IconHolder>
                     </ChoiceHolder>
-                <Link to={'/RoomChoice'} >
                     <ChoiceHolder>
-                        <h3>Intérieur</h3>
+                        <h3>#Réparation</h3>
                         <IconHolder>
-                            <img src='assets/CanapeIcone.png' alt='interieur' width='75%' />
+                            <img src='assets/MarteauIcone.png' alt='interieur' width='75%' />
                         </IconHolder>
                     </ChoiceHolder>
-                </Link>
+                    <ChoiceHolder>
+                        <h3>#Staging</h3>
+                        <IconHolder>
+                            <img src='assets/lampeIcone.png' alt='interieur' width='75%' />
+                        </IconHolder>
+                    </ChoiceHolder>
             </ChoicesContainer>
         </>
     )
@@ -41,11 +44,13 @@ const TextHolder = styled.div`
 const ChoicesContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #179E9F;
     border-radius: 10px;
     margin: 1rem;
     padding: 1rem;
+    padding-bottom: 2rem
 `
 const ChoiceHolder = styled.div`
     display: flex;
@@ -65,8 +70,8 @@ const ChoiceHolder = styled.div`
 const IconHolder = styled.div`
     border-radius: 50%;
     background-color: white;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,4 +81,5 @@ const IconHolder = styled.div`
     }
 `
 
-export default InsideOutsidePage;
+
+export default ToDoPage;
