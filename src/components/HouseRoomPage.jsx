@@ -9,42 +9,54 @@ function HouseRoomPage() {
                 <h1>Choisissez une pièce </h1>
             </TextHolder>
             <ChoicesContainer>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/lampeIcone.png' alt='Chambre' width='65%' />
                         </IconHolder>
                         <h3>Chambre</h3>
                     </ChoiceHolder>
+                    </Link>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/DoucheIcone.png' alt='salledebain' width='75%' />
                         </IconHolder>
                         <h3>Salle de bain</h3>
                     </ChoiceHolder>
+                    </Link>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/cuisineIcone.png' alt='Cuisine' width='65%' />
                         </IconHolder>
                         <h3>Cuisine</h3>
                     </ChoiceHolder>
+                    </Link>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/CanapeIcone.png' alt='Salon' width='75%' />
                         </IconHolder>
                         <h3>Salon</h3>
                     </ChoiceHolder>
+                    </Link>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/tuyauIcone.png' alt='Toilettes' width='65%' />
                         </IconHolder>
                         <h3>Toilettes</h3>
                     </ChoiceHolder>
+                    </Link>
+                    <Link to={'/ToDoPage'} >
                     <ChoiceHolder>
                         <IconHolder>
                             <img src='assets/priseIcone.png' alt='Bureau' width='75%' />
                         </IconHolder>
                         <h3>Bureau</h3>
                     </ChoiceHolder>
+                    </Link>
             </ChoicesContainer>
         </>
     )
