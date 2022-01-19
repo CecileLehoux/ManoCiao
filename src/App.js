@@ -3,7 +3,6 @@ import React from "react";
 import GlobalStyle from "./globalStyle";
 import Header from "./components/Header";
 import InsideOutsidePage from "./components/InsideOutsidePage";
-import UploadImg from "./components/UploadImg";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           <Route path="/" element={<InsideOutsidePage />} />
         </Routes>
       </Router>
-      <UploadImg />
     </div>
   );
 }
