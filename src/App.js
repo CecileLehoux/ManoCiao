@@ -10,8 +10,6 @@ import InsideOutsidePage from "./components/InsideOutsidePage";
 import HouseRoomPage from "./components/HouseRoomPage";
 import ToDoPage from "./components/ToDoPage";
 
-
-
 function App() {
   return (
     <div className="App">

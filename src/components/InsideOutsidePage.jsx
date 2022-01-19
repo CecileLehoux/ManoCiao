@@ -76,5 +76,4 @@ const IconHolder = styled.div`
     }
 `
 
-
 export default InsideOutsidePage;
