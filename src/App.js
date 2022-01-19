@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        {/* <ColorThiefContainer /> */}
+        <ColorThiefContainer />
       </header>
       <Helmet>
         <script type="module" src="app.js"></script>

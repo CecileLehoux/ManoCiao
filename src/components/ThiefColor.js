@@ -11,6 +11,11 @@ const ColorThiefContainer = () => {
       colorThief.getColor(img);
     });
   }
+  return (
+    <div>
+      <img src='ressource/Limbo.jpg' alt='Limbo'/>
+    </div>
+  )
 };
 
 export default ColorThiefContainer;
