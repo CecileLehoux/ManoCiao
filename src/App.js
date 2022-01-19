@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Helmet } from "react-helmet";
+import ColorThiefContainer from './components/ThiefColor';
 
 function App() {
   return (
@@ -17,7 +19,11 @@ function App() {
         >
           Learn React
         </a>
+        {/* <ColorThiefContainer /> */}
       </header>
+      <Helmet>
+        <script type="module" src="app.js"></script>
+      </Helmet>
     </div>
   );
 }
