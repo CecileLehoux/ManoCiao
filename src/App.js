@@ -8,16 +8,18 @@ import GlobalStyle from './globalStyle';
 import Header from './components/Header';
 import InsideOutsidePage from "./components/InsideOutsidePage";
 
+
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <Router>
         <Header />
-          <Routes>
+        <Routes>
           <Route path="/" element={<InsideOutsidePage />} />
-          </Routes>
+        </Routes>
       </Router>
+      <UploadImg />
     </div>
   );
 }
