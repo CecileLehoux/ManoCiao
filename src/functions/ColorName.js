@@ -30,36 +30,31 @@ const ColorName = () => {
     }
     else if (
       (colorHSVFromHex[0] >= 0 && colorHSVFromHex[0] <= 15) ||
-      (colorHSVFromHex[0] >= 356 && colorHSVFromHex[0] <= 360)
+      (colorHSVFromHex[0] >= 351 && colorHSVFromHex[0] <= 360)
     ) {
       setColorName("Rouge");
     }
     else if (
-      (colorHSVFromHex[0] >= 16 && colorHSVFromHex[0] <= 23) ||
-      (colorHSVFromHex[0] >= 29 && colorHSVFromHex[0] <= 45)
+      (colorHSVFromHex[0] >= 16 && colorHSVFromHex[0] <= 20) ||
+      (colorHSVFromHex[0] >= 36 && colorHSVFromHex[0] <= 45)
     ) {
       setColorName("Orange");
-    } else if (colorHSVFromHex[0] >= 24 && colorHSVFromHex[0] <= 28) {
+    } else if (colorHSVFromHex[0] >= 21 && colorHSVFromHex[0] <= 35) {
       setColorName("Marron");
-    } else if (colorHSVFromHex[0] >= 46 && colorHSVFromHex[0] <= 75) {
+    } else if (colorHSVFromHex[0] >= 46 && colorHSVFromHex[0] <= 65) {
       setColorName("Jaune");
-    } else if (colorHSVFromHex[0] >= 76 && colorHSVFromHex[0] <= 145) {
+    } else if (colorHSVFromHex[0] >= 66 && colorHSVFromHex[0] <= 160) {
       setColorName("Vert");
-    } else if (colorHSVFromHex[0] >= 146 && colorHSVFromHex[0] <= 255) {
+    } else if (colorHSVFromHex[0] >= 161 && colorHSVFromHex[0] <= 240) {
       setColorName("Bleu");
-    } else if (colorHSVFromHex[0] >= 256 && colorHSVFromHex[0] <= 315) {
+    } else if (colorHSVFromHex[0] >= 241 && colorHSVFromHex[0] <= 315) {
       setColorName("Violet");
-    } else if (colorHSVFromHex[0] >= 316 && colorHSVFromHex[0] <= 355) {
+    } else if (colorHSVFromHex[0] >= 316 && colorHSVFromHex[0] <= 350) {
       setColorName("Rose");
     }
   }, [colorHSVFromHex]);
 
-  return (
-    <div>
-      <p>{colorHSVFromHex}</p>
-      <p>{colorName}</p>
-    </div>
-  );
+  return(colorName)
 };
 
 export default ColorName;
