@@ -15,7 +15,6 @@ const DragAndDrop = () => {
           <h1>Déposez votre photo ici</h1>
           <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
           <p>{file ? `File name: ${file.name}` : "no files uploaded yet"}</p>
-          {/* <p>{file}</p> */}
         </div>
       );
 }
