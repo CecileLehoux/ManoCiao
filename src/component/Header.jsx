@@ -17,6 +17,7 @@ const Nav = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   background: white;
+  box-shadow: 2px 2px 2px lightgrey;
 `;
 
 const Logo = styled.a`
