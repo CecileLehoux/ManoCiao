@@ -17,5 +17,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: sans-serif;
         
     }
+    a {
+       text-decoration: none;
+    }
 `
 export default GlobalStyle;
