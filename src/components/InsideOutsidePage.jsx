@@ -17,11 +17,11 @@ function InsideOutsidePage() {
                             <img src='assets/potExterieur.png' alt='exterieur' width='65%' />
                         </IconHolder>
                     </ChoiceHolder>
-                <Link to={''} >
+                <Link to={'/RoomChoice'} >
                     <ChoiceHolder>
                         <h3>Intérieur</h3>
                         <IconHolder>
-                            <img src='assets/Canape.png' alt='interieur' width='75%' />
+                            <img src='assets/CanapeIcone.png' alt='interieur' width='75%' />
                         </IconHolder>
                     </ChoiceHolder>
                 </Link>
@@ -45,7 +45,7 @@ const ChoicesContainer = styled.div`
     background-color: #179E9F;
     border-radius: 10px;
     margin: 1rem;
-    padding: 2rem;
+    padding: 1rem;
 `
 const ChoiceHolder = styled.div`
     display: flex;

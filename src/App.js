@@ -7,6 +7,8 @@ import React from 'react';
 import GlobalStyle from './globalStyle';
 import Header from './components/Header';
 import InsideOutsidePage from "./components/InsideOutsidePage";
+import HouseRoomPage from "./components/HouseRoomPage";
+
 
 
 function App() {
@@ -17,9 +19,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<InsideOutsidePage />} />
+          <Route path="/RoomChoice" element={<HouseRoomPage />} />
         </Routes>
       </Router>
-      <UploadImg />
     </div>
   );
 }
