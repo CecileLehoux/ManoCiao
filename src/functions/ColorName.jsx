@@ -15,11 +15,11 @@ const ColorName = (hexcolor) => {
   }, []);
 
   useEffect(() => {
-    if (colorHSVFromHex[1] >= 95) {
+    if (colorHSVFromHex[0] <= 5 && colorHSVFromHex[1] <= 5 && colorHSVFromHex[2] >= 95 ) {
       setColorName("Blanc");
-    } else if (colorHSVFromHex[1] <= 10 && (colorHSVFromHex[2] >= 10 && colorHSVFromHex[2] <= 80 )) {
+    } else if (colorHSVFromHex[0] <= 5 && colorHSVFromHex[1] <= 5 && colorHSVFromHex[2] <= 5) {
       setColorName("Noir");
-    } else if (colorHSVFromHex[1] === 0 && (colorHSVFromHex[2] >= 10 || colorHSVFromHex[2] <= 80 )) {
+    } else if (colorHSVFromHex[1] <= 10 && colorHSVFromHex[2] >= 10) {
       setColorName("Gris");
     } else if (
       (colorHSVFromHex[0] >= 0 && colorHSVFromHex[0] <= 15) ||

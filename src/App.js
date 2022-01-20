@@ -15,6 +15,8 @@ import ProductsPage from "./components/ProductsPage";
 // import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
 import CategoryChoice from "./components/CategoryChoice";
+import BathroomPage from "./components/BathroomPage";
+import ChooseColor from "./components/ChooseColor";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="/ProductsPage" element={<ProductsPage/>} />
           <Route path="/ChooseImg" element={<ChooseImg />} />
           <Route path="/CategoryChoice" element={<CategoryChoice />} />
+          <Route path="/BathroomChoice" element={<BathroomPage />} />
+          <Route path="/ChooseColor" element={<ChooseColor />} />
         </Routes>
       </Router>
     </div>

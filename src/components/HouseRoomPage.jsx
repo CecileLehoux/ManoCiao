@@ -17,7 +17,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/CategoryChoice'} >
+                    <Link to={'/BathroomChoice'} >
                     <ChoiceHolder>
                         <h3>Salle de bain</h3>
                         <IconHolder>
