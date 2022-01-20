@@ -4,6 +4,10 @@ const app = express();
 
 const port = 5000;
 
+const cors = require("cors");
+
+app.use(cors());
+
 const multer = require("multer");
 
 const storage = multer.diskStorage({
@@ -18,7 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.post("/upload", upload.single("image"), (req, res) => {
-  res.send(req.files["image"][0].filename);
+  res.send(req.file.filename);
 });
 
 app.listen(port, (err) => {
