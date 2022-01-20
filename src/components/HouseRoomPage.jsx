@@ -81,6 +81,11 @@ margin-left: 1rem;
 margin-right: 1rem;
 padding: 1rem;
 height: 36rem;
+@media screen and (min-width: 880px) {
+    width: 36%;
+    margin:0 auto;
+    height: auto;
+}
 `
 const ChoiceHolder = styled.div`
 display: flex;

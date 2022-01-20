@@ -22,7 +22,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.a`
-  width: 50%;
+  //width: 50%;
   img {
     width: 200px;
     padding: 10px;
