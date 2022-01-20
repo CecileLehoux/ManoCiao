@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import UploadImg from "../datas/uploadImg";
 import ColorThief from "./ColorThief";
 import styled from "styled-components";
+import ColorPage from "./ColorPage";
 
 function ChooseImg() {
   const { register, handleSubmit } = useForm();
@@ -21,7 +22,7 @@ function ChooseImg() {
 
   return (
     <div>
-      <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
+      {!image && <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
         <div>
           <LabelUpload htmlFor="image">
             Télécharger votre photo : <br/>
@@ -36,7 +37,7 @@ function ChooseImg() {
         <div>
           <InputSubmit value="Envoyer" type="submit" />
         </div>
-      </Form>
+      </Form>}
       {image && <ColorThief imageUrl={"/assets/"+image.name} />}
     </div>
   );

@@ -1,6 +1,7 @@
 import Color, { Palette } from "color-thief-react";
 import styled from "styled-components";
 import ColorName from "../functions/ColorName";
+import ColorPage from "./ColorPage";
 
 
 
@@ -11,8 +12,7 @@ const ColorThief = (imageUrl) => {
         console.log(imageUrl.imageUrl)
   return (
     <ColorThiefContainer>
-      <ImageToUpload src={imgSrc} alt="" />
-      <Color src={imgSrc} crossOrigin="anonymous" format="hex">
+      <ColorPage image={<ImageToUpload src={imgSrc} alt="" />} principal={<Color src={imgSrc} crossOrigin="anonymous" format="hex">
         {({ data, loading }) => {
           if (loading) return <Loading />;
           return (
@@ -21,8 +21,7 @@ const ColorThief = (imageUrl) => {
             </div>
           );
         }}
-      </Color>
-      <Palette src={imgSrc} crossOrigin="anonymous" format="hex" colorCount={4}>
+      </Color>} palette={<Palette src={imgSrc} crossOrigin="anonymous" format="hex" colorCount={4}>
         {({ data, loading }) => {
           if (loading) return <Loading />;
           return (
@@ -38,7 +37,7 @@ const ColorThief = (imageUrl) => {
             </div>
           );
         }}
-      </Palette>
+      </Palette>}/>
     </ColorThiefContainer>
   );
 };
