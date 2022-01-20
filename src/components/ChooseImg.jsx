@@ -22,6 +22,7 @@ function ChooseImg() {
 
   return (
     <div>
+      <Container>
       {!image && (
         <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
           <div>
@@ -43,6 +44,7 @@ function ChooseImg() {
           je fais confiance à Mano Mano
         </ButtonBg>
       </Link>
+      </Container>
     </div>
   );
 }
