@@ -23,7 +23,7 @@ function ChooseImg() {
   return (
     <div>
       <TextHolder>
-        <h1>Avez-vous une inspiration à nous partager ?</h1> <br />
+        <h1>Avez-vous une inspiration à nous partager ?</h1>
         <h3>
           En fonction de votre photo, nous selectionnerons un panel de couleur
         </h3>
@@ -50,20 +50,25 @@ function ChooseImg() {
           </Form>
         )}
         {image && <ColorThief imageUrl={"/assets/" + image.name} />}
-        <TextHolder>
-          <h1>Je n'ai pas d'idée ?</h1>
-        </TextHolder>
-        <Link to="/CurrationPage">
-          <ButtonBg>je fais confiance à Mano Mano</ButtonBg>
-        </Link>
+        {image ? (
+          <div></div>
+        ) : (
+          <>
+            <TextHolder>
+              <h1>Je n'ai pas d'idée ?</h1>
+            </TextHolder>
+            <Link to="/CurrationPage">
+              <ButtonBg>Je fais confiance à Mano Mano</ButtonBg>
+            </Link>
+          </>
+        )}
       </Container>
     </div>
   );
 }
 
 const CarreBleu = styled.div`
-  width: 90%;
-  height: 110px;
+  padding: 3rem;
   border-radius: 10px;
   background-color: #179e9f;
   display: flex;
@@ -91,9 +96,7 @@ const LabelUpload = styled.label`
 
 const UploadInput = styled.input`
   margin-top: 0;
-
   width: 0rem;
-
   font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   outline-style: none;
@@ -106,8 +109,8 @@ const Container = styled.div`
   padding: 1rem;
   height: 300px;
   margin: 0 auto;
-  @media screen and (max-width: 880px) {
-    width: 90%;
+  @media screen and (min-width: 880px) {
+    width: 36%;
   }
 `;
 
@@ -118,16 +121,14 @@ const Form = styled.form`
 const InputSubmit = styled.input`
   margin-top: 0px;
   margin-bottom: 5px;
-
   width: 10rem;
   color: white;
   border: 0;
   background-color: #179e9f;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   font-size: 1.3em;
-
   padding: 0rem;
-
   font-family: "Roboto", sans-serif;
   &:hover {
     transform: scale(1.1);
@@ -165,8 +166,7 @@ const ButtonBg = styled.button`
   color: #179e9f;
   border: 1px solid #179e9f;
   border-radius: 10px;
-  font-size: 16px;
-  margin-top: 1rem;
+  font-size: 1.3em;
   &:hover {
     background-color: #179e9f;
     border: 1px solid #fff;

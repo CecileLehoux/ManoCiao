@@ -82,9 +82,8 @@ const RoundContainer = styled.div`
 `;
 
 const Round = styled.div`
-  border: 2px solid black;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   margin: 5px;
   border-radius: 50%;
   background-color: ${(e) => (e.color ? e.color : "white")};

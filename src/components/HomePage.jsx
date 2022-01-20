@@ -58,6 +58,10 @@ const Button = styled.button`
     color: #179e9f;
     border: 1px solid #179e9f;
   }
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 `;
 
 const ChoiceHolder = styled.div`

@@ -6,7 +6,7 @@ function ColorPage({image, principal, palette}) {
   return (
     <>
       <TextHolder>
-        <h1>Notre sélection de couleur</h1>
+        <h1>Découvrez notre sélection de couleur pour votre intérieur</h1>
         {image}
         <h3>
           Voici un panel de couleur séléctionner par nos soins en fonction de
@@ -19,9 +19,11 @@ function ColorPage({image, principal, palette}) {
         {/* <Image src="../../assets/couleurs.png" alt="panel" /> */}
         {principal}
         {palette}
-        <div>
-          <h3>Enfin precisez-nous votre budget</h3>
-        </div>
+
+        <Budget>
+            <hr/>
+          <h3>Enfin précisez-nous votre budget</h3>
+        </Budget>
         <div>
           <Ul>
       
@@ -47,6 +49,10 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+  h1 {
+      font-size: 1.3rem;
+      color:#179E9F ;
+  }
 `;
 
 const Button = styled.button`
@@ -70,7 +76,6 @@ const Container = styled.div`
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
-  width: 100%;
   margin: 0 auto;
   @media screen and (max-width: 880px) {
     width: 90%;
@@ -107,7 +112,14 @@ const active = styled.a`
     border: 1px solid #179E9F ;
 }
 `
-
+const Budget = styled.div`
+margin-top: 2rem;
+hr {
+    width: 80%;
+   background-color : #179E9F;
+   height: 3px;
+}
+`
 
 const Image = styled.img`
   width: 30%;

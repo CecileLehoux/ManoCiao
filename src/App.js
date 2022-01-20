@@ -15,6 +15,7 @@ import ProductsPage from "./components/ProductsPage";
 // import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
 import CategoryChoice from "./components/CategoryChoice";
+import ColorPageCurration from "./components/ColorPageCurration";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ToDoPage" element={<ToDoPage />} />
           <Route path="/CurrationPage" element={<CurrationPage />} />
           <Route path="/ColorPage" element={<ColorPage/>} />
+          <Route path="/ColorPageCurration" element={<ColorPageCurration/>} />
           <Route path="/ProductsPage" element={<ProductsPage/>} />
           <Route path="/ChooseImg" element={<ChooseImg />} />
           <Route path="/CategoryChoice" element={<CategoryChoice />} />
