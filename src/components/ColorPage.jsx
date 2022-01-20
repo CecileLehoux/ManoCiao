@@ -11,19 +11,17 @@ function ColorPage() {
                 </ArrowHolder>
       </Link>
       <TextHolder>
-        <h1>Notre sélection de couleur</h1>
+        <h1>Un camaïeu de couleurs</h1>
         <h3>
-          Voici un panel de couleur séléctionner par nos soins en fonction de
-          vos inspirations
+          Voici un panel de couleurs choisies par nos soins en fonction de
+          vos inspirations.
         </h3>
       </TextHolder>
 
       <Container>
         <Image src="../../assets/couleurs.png" alt="panel" />
 
-        <div>
-          <h3>Enfin precisez-nous votre budget</h3>
-        </div>
+          <h3>Enfin précisez-nous votre budget</h3>
         <div>
           <Ul>
             <Li><input type="radio"/>100€ à 250€ </Li>
@@ -65,6 +63,7 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+  margin-top: 2.5rem;
 `;
 
 const Button = styled.button`
@@ -87,7 +86,7 @@ const Container = styled.div`
   margin: 0 auto;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: 1rem;
+  padding: .5rem;
   width: 100%;
   margin: 0 auto;
   @media screen and (max-width: 880px) {
@@ -101,7 +100,7 @@ const Ul = styled.ul`
   justify-content: space-evenly;
   width: 50%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
   @media screen and (max-width: 880px) {
   flex-direction: column;
   margin-bottom : 5px;
@@ -112,7 +111,7 @@ const Li = styled.li`
   text-decoration: none;
   border: 1px solid #179E9F;
   border-radius:10px;
-  padding: 1.5rem;
+  padding: 1rem;
   @media screen and (max-width: 880px) {
   margin-bottom : 5px;
 }

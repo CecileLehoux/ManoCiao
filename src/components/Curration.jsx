@@ -58,7 +58,7 @@ flex-direction: column;
 text-align: center;
 justify-content: center;
 align-items: center;
-padding: none;
+padding: 1rem;
 @media screen and (max-width: 880px) {
     width: 80%;
     margin:0 auto;

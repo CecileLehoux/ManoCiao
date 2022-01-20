@@ -20,9 +20,6 @@ function ProductsPage() {
                     <Image src='../../assets/images/canape-marron.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </SousContainer>
-    
-        
-       
                 <SousContainer>
                     <p>Fauteuil Marron Similicuir daim</p>
                     <Image src='../../assets/images/canape-marron-fonce.png' alt='salon1'/>
@@ -88,7 +85,7 @@ const ArrowHolder = styled.div`
 const TextHolder = styled.div`
 display: block;
 text-align: center;
-padding: none;
+padding: 1.5rem;
 `
 const Container = styled.div`
 display: flex;
