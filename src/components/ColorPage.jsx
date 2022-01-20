@@ -5,13 +5,17 @@ import styled from "styled-components";
 function ColorPage({image, principal, palette}) {
   return (
     <>
+      <Link to={'/CurrationPage'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+      </Link>
       <TextHolder>
-        <h1>Notre sélection de couleur</h1>
+        <h1>Un camaïeu de couleurs</h1>
         {image}
         <h3>
-          Voici un panel de couleur séléctionner par nos soins en fonction de
-          vos inspirations
-          
+          Voici un panel de couleurs choisies par nos soins en fonction de
+          vos inspirations.
         </h3>
       </TextHolder>
 
@@ -19,9 +23,11 @@ function ColorPage({image, principal, palette}) {
         {/* <Image src="../../assets/couleurs.png" alt="panel" /> */}
         {principal}
         {palette}
-        <div>
-          <h3>Enfin precisez-nous votre budget</h3>
-        </div>
+
+        <Budget>
+            <hr/>
+          <h3>Enfin précisez-nous votre budget</h3>
+        </Budget>
         <div>
           <Ul>
       
@@ -40,6 +46,22 @@ function ColorPage({image, principal, palette}) {
   );
 }
 
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,6 +69,11 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+  margin-top: 2.5rem;
+  h1 {
+      font-size: 1.3rem;
+      color:#179E9F ;
+  }
 `;
 
 const Button = styled.button`
@@ -70,7 +97,6 @@ const Container = styled.div`
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
-  width: 100%;
   margin: 0 auto;
   @media screen and (max-width: 880px) {
     width: 90%;
@@ -83,7 +109,7 @@ const Ul = styled.ul`
   justify-content: space-evenly;
   width: 50%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
   @media screen and (max-width: 880px) {
   flex-direction: column;
   margin-bottom : 5px;
@@ -94,7 +120,7 @@ const Li = styled.li`
   text-decoration: none;
   border: 1px solid #179E9F;
   border-radius:10px;
-  padding: 1.5rem;
+  padding: 1rem;
   @media screen and (max-width: 880px) {
   margin-bottom : 5px;
 }
@@ -107,7 +133,14 @@ const active = styled.a`
     border: 1px solid #179E9F ;
 }
 `
-
+const Budget = styled.div`
+margin-top: 2rem;
+hr {
+    width: 80%;
+   background-color : #179E9F;
+   height: 3px;
+}
+`
 
 const Image = styled.img`
   width: 30%;

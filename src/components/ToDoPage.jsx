@@ -6,6 +6,11 @@ function ToDoPage() {
     
     return (
         <>
+            <Link to={'/'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
             <TextHolder>
                 <h1>Que souhaitez-vous faire ?</h1>
             </TextHolder>
@@ -47,7 +52,31 @@ function ToDoPage() {
     )
 
 }
+//<ChoiceHolder>
+  //                      <h3>#Réparation</h3>
+    //                    <IconHolder>
+      //                      <img src='assets/MarteauIcone.png' alt='interieur' width='75%' />
+        //                </IconHolder>
+          //          </ChoiceHolder>
 
+
+
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
     display: flex;
     flex-direction: column;
@@ -55,6 +84,8 @@ const TextHolder = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 13px;
+    margin-top: 2rem;
+
 `
 
 const ChoicesContainer = styled.div`
