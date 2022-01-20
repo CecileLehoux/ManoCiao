@@ -23,6 +23,7 @@ function ToDoPage() {
                         </IconHolder>
                     </ChoiceHolder>
             </ChoicesContainer>
+            <hr/>
             <TextHolder>
                 <h1>De quel projet s'agit-il ?</h1>
             </TextHolder>
@@ -58,6 +59,7 @@ const TextHolder = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 13px;
 `
 
 const ChoicesContainer = styled.div`
@@ -65,7 +67,6 @@ const ChoicesContainer = styled.div`
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #179E9F;
     border-radius: 10px;
     margin: 1rem;
     padding: 1rem;
@@ -95,6 +96,7 @@ const ChoiceHolder = styled.div`
 const IconHolder = styled.div`
     border-radius: 50%;
     background-color: white;
+    border: 1px solid #179E9F;
     width: 7rem;
     height: 7rem;
     display: flex;

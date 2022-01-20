@@ -9,7 +9,7 @@ function HouseRoomPage() {
                 <h1>Choisissez une pièce </h1>
             </TextHolder>
             <ChoicesContainer>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Chambre</h3>
                         <IconHolder>
@@ -17,7 +17,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Salle de bain</h3>
                         <IconHolder>
@@ -25,7 +25,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Cuisine</h3>
                         <IconHolder>
@@ -33,7 +33,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Salon</h3>
                         <IconHolder>
@@ -41,7 +41,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Toilettes</h3>
                         <IconHolder>
@@ -49,7 +49,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Bureau</h3>
                         <IconHolder>
@@ -69,13 +69,13 @@ text-align: center;
 justify-content: center;
 align-items: center;
 padding: none;
+font-size: 13px;
 `
 const ChoicesContainer = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
-background-color: #179E9F;
 border-radius: 10px;
 margin-left: 1rem;
 margin-right: 1rem;
@@ -88,7 +88,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 h3 {
-    color: white;
+    color: #179E9F;
     font-weight: bold;
     font-size: large;
 }
@@ -100,6 +100,7 @@ h3 {
 const IconHolder = styled.div`
 border-radius: 50%;
 background-color: white;
+border: 1px solid #179E9F;
 width: 8rem;
 height: 8rem;
 display: flex;

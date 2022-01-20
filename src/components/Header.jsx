@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
     <Nav>
         <Logo>
-          <img src="assets/ManoLogo.png" alt="Logo-Mano" />
+          <Link to={'/'} ><img src="assets/ManoLogo.png" alt="Logo-Mano" /></Link>
         </Logo>
     </Nav>
   );
