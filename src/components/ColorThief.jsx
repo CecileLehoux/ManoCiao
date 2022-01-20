@@ -28,7 +28,7 @@ const ColorThief = () => {
             <div>
               Les couleurs à associer sont :
               <ul>
-                {data.map((color, index) => (
+                {data.slice(1).map((color, index) => (
                   <li key={index} style={{ color: color }}>
                     <strong><ColorName hexcolor={color} /> ({color})</strong>
                   </li>
