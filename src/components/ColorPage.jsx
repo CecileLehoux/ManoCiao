@@ -5,6 +5,11 @@ import styled from "styled-components";
 function ColorPage() {
   return (
     <>
+      <Link to={'/CurrationPage'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+      </Link>
       <TextHolder>
         <h1>Notre sélection de couleur</h1>
         <h3>
@@ -37,6 +42,22 @@ function ColorPage() {
   );
 }
 
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
   display: flex;
   flex-direction: column;

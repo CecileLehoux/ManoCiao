@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import UploadImg from "../datas/uploadImg";
 import ColorThief from "./ColorThief";
 import styled from "styled-components";
@@ -21,6 +22,11 @@ function ChooseImg() {
 
   return (
     <div>
+    <Link to={'/CategoryChoice'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
       <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
         <div>
           <LabelUpload htmlFor="image">
@@ -42,6 +48,22 @@ function ChooseImg() {
   );
 }
 
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const UploadInput = styled.input`
     margin-top: 0;
     width: 10rem;

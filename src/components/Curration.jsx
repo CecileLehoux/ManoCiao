@@ -5,6 +5,11 @@ import styled from 'styled-components';
 function CurrationPage() {
     return (
         <>
+        <Link to={'/ToDoPage'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
             <TextHolder>
                 <h1>Choisissez le style de votre intérieur</h1>
                 <h3>En fonction de votre choix nous allons vous séléctionner un panel de couleur et de meubles assortis</h3>
@@ -31,6 +36,22 @@ function CurrationPage() {
     )
 }
 
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
 display: flex;
 flex-direction: column;
