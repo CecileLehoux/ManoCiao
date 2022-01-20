@@ -21,9 +21,9 @@ function App() {
           <Route path="/" element={<InsideOutsidePage />} />
           <Route path="/RoomChoice" element={<HouseRoomPage />} />
           <Route path="/ToDoPage" element={<ToDoPage />} />
+          <Route path="/ColorThief" element={<ColorThief/>} />
         </Routes>
       </Router>
-      <ColorThief/>
     </div>
   );
 }

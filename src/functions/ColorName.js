@@ -9,7 +9,7 @@ const ColorName = () => {
   useEffect(() => {
     axios
       // Remplacer la couleur hex en dur par la props
-      .get(`https://www.thecolorapi.com/id?hex=FFC0CB`)
+      .get(`https://www.thecolorapi.com/id?hex=#dec014)`)
       .then((res) => res.data)
       .then((data) => setColorHSVFromHex([data.hsv.h, data.hsv.s, data.hsv.v]))
       .then(console.log(colorHSVFromHex))
@@ -27,14 +27,12 @@ const ColorName = () => {
       colorHSVFromHex[2] <= 95
     ) {
       setColorName("Gris");
-    }
-    else if (
+    } else if (
       (colorHSVFromHex[0] >= 0 && colorHSVFromHex[0] <= 15) ||
       (colorHSVFromHex[0] >= 351 && colorHSVFromHex[0] <= 360)
     ) {
       setColorName("Rouge");
-    }
-    else if (
+    } else if (
       (colorHSVFromHex[0] >= 16 && colorHSVFromHex[0] <= 20) ||
       (colorHSVFromHex[0] >= 36 && colorHSVFromHex[0] <= 45)
     ) {
@@ -54,7 +52,11 @@ const ColorName = () => {
     }
   }, [colorHSVFromHex]);
 
-  return(colorName)
+  return (
+    <div>
+      <p>{colorName}</p>
+    </div>
+  );
 };
 
 export default ColorName;
