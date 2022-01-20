@@ -5,14 +5,11 @@ import Header from "./components/Header";
 import InsideOutsidePage from "./components/InsideOutsidePage";
 import HouseRoomPage from "./components/HouseRoomPage";
 import ToDoPage from "./components/ToDoPage";
-// import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
 
 function App() {
   return (
     <div className="App">
-      {/* <DragAndDrop/> */}
-      {/* <ColorThief /> */}
       <GlobalStyle />
       <Router>
         <Header />

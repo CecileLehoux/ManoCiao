@@ -1,4 +1,7 @@
 import Color, { Palette } from "color-thief-react";
+import styled from "styled-components";
+import ColorName from "../functions/ColorName";
+
 
 
 const Loading = () => <div>Loading...</div>;
@@ -7,14 +10,14 @@ const ColorThief = (imageUrl) => {
         const imgSrc =imageUrl.imageUrl;
         console.log(imageUrl.imageUrl)
   return (
-    <div>
-        <img src={imgSrc} alt="" />
+    <ColorThiefContainer>
+      <ImageToUpload src={imgSrc} alt="" />
       <Color src={imgSrc} crossOrigin="anonymous" format="hex">
         {({ data, loading }) => {
           if (loading) return <Loading />;
           return (
             <div>
-              La couleur principale est : <strong>{data}</strong>
+              La couleur principale est : <strong style={{ color: data }}><ColorName hexcolor={data} /> ({data})</strong>
             </div>
           );
         }}
@@ -28,7 +31,7 @@ const ColorThief = (imageUrl) => {
               <ul>
                 {data.map((color, index) => (
                   <li key={index} style={{ color: color }}>
-                    <strong>{color}</strong>
+                    <strong><ColorName hexcolor={color} /> <Round color={color}></Round></strong>
                   </li>
                 ))}
               </ul>
@@ -36,9 +39,28 @@ const ColorThief = (imageUrl) => {
           );
         }}
       </Palette>
-      
-    </div>
+    </ColorThiefContainer>
   );
-}
+};
+
+const ColorThiefContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ImageToUpload = styled.img`
+  margin: auto;
+  max-width: 360px;
+`
+
+const Round = styled.div`
+border: 2px solid black;
+width: 20px;
+height: 20px;
+  border-radius: 50%;
+  background-color: ${(e) => (e.color ? e.color : 'white')};
+`
 
 export default ColorThief;
