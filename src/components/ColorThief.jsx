@@ -1,10 +1,11 @@
 import Color, { Palette } from "color-thief-react";
 
+
 const Loading = () => <div>Loading...</div>;
 
-const ColorThief = () => {
-        const imgSrc =
-    "http://ekladata.com/kRyR4CJUacmCnlEc-_pILyWpo0s@390x318.jpg";
+const ColorThief = ({imageUrl}) => {
+        const imgSrc =`/assets/${imageUrl}`
+    ;
   return (
     <div>
         <img src={imgSrc} alt="" />
