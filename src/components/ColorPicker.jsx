@@ -9,9 +9,9 @@ const ColorPicker = () => {
   const [hexFormColor, setHexFormColor] = useState("#FFFFFF");
 
   const ColorPickerContainer = (props) => (
-    <Container>
+    <ColorContainer>
       <input type="color" {...props} />
-    </Container>
+    </ColorContainer>
   );
 
   const handleInput = (e) => {
@@ -23,7 +23,7 @@ const ColorPicker = () => {
   }, [color]);
 
   useEffect(() => {
-    console.log(hexFormColor)
+    console.log(hexFormColor);
     const transformHexColor = hexFormColor.replace("#", "");
     axios
       .get(`https://www.thecolorapi.com/id?hex=${transformHexColor}`)
@@ -33,18 +33,11 @@ const ColorPicker = () => {
   }, [hexFormColor]);
 
   useEffect(() => {
-    if (colorHSVFromHex[1] >= 95 && colorHSVFromHex[2] <= 5) {
+    if (colorHSVFromHex[0] <= 5 && colorHSVFromHex[1] <= 5 && colorHSVFromHex[2] >= 95 ) {
       setColorName("Blanc");
-    } else if (
-      colorHSVFromHex[1] <= 10 &&
-      colorHSVFromHex[2] >= 10 &&
-      colorHSVFromHex[2] <= 80
-    ) {
+    } else if (colorHSVFromHex[0] <= 5 && colorHSVFromHex[1] <= 5 && colorHSVFromHex[2] <= 5) {
       setColorName("Noir");
-    } else if (
-      colorHSVFromHex[1] === 0 &&
-      (colorHSVFromHex[2] >= 10 || colorHSVFromHex[2] <= 80)
-    ) {
+    } else if (colorHSVFromHex[1] <= 10 && colorHSVFromHex[2] >= 10) {
       setColorName("Gris");
     } else if (
       (colorHSVFromHex[0] >= 0 && colorHSVFromHex[0] <= 15) ||
@@ -72,14 +65,30 @@ const ColorPicker = () => {
   }, [colorHSVFromHex]);
 
   return (
-    <div className="App">
-      <ColorPickerContainer onChange={handleInput} value={color} />
-      <>{colorName}</>      
+    <div>
+      <Container>
+        <ColorPickerContainer onChange={handleInput} value={color} />
+        <p>{colorName}</p>
+      </Container>
     </div>
   );
 };
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  max-width: 150px;
+  padding: 4px 12px;
+  border: 1px solid #179e9f;
+  border-radius: 4px;
+`;
+
+const ColorContainer = styled.div`
+  
+
   input[type="color"] {
     margin: 8px;
     padding: 0;
@@ -102,7 +111,6 @@ const Container = styled.div`
     &::-webkit-color-swatch {
       padding: 0;
     }
-  }
 `;
 
 export default ColorPicker;

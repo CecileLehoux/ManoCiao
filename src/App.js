@@ -11,6 +11,8 @@ import ProductsPage from "./components/ProductsPage";
 // import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
 import CategoryChoice from "./components/CategoryChoice";
+import BathroomPage from "./components/BathroomPage";
+import ChooseColor from "./components/ChooseColor";
 import ColorPageCurration from "./components/ColorPageCurration";
 import ProductsPagePurple from "./components/ProductsPagePurple";
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/ProductsPagePurple" element={<ProductsPagePurple />} />
           <Route path="/ChooseImg" element={<ChooseImg />} />
           <Route path="/CategoryChoice" element={<CategoryChoice />} />
+          <Route path="/BathroomChoice" element={<BathroomPage />} />
+          <Route path="/ChooseColor" element={<ChooseColor />} />
         </Routes>
       </Router>
     </div>

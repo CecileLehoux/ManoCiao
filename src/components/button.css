@@ -1,0 +1,27 @@
+.choosenbutton {
+  padding: 1rem;
+  margin: 0 0.5rem;
+  background-color: #fff;
+  color: #179e9f;
+  border: 1px solid #179e9f;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+  
+.choosenbutton:hover {
+   background-color: #179e9f;
+   border: 1px solid #fff;
+   color: #ffffff;
+}
+
+.clickedbutton {
+  padding: 1rem;
+  margin: 0 0.5rem;
+  background-color: #179e9f;
+  border: 1px solid #fff;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 1rem;
+}
