@@ -6,6 +6,7 @@ function CategoryChoice() {
   return (
     <>
       <TextHolder>
+        <h2>Aménager votre salon</h2>
         <img
           src="assets/CanapeIcone.png"
           alt="canape"
@@ -59,7 +60,6 @@ const ChoicesContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: flex-start;
-  background-color: #179e9f;
   border-radius: 10px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -82,6 +82,7 @@ const ChoiceHolder = styled.div`
 const IconHolder = styled.div`
   border-radius: 50%;
   background-color: white;
+  border: 1px solid #179e9f;
   width: 8rem;
   height: 8rem;
   display: flex;
