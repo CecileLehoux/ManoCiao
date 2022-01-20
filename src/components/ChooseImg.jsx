@@ -24,10 +24,11 @@ function ChooseImg() {
       <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
         <div>
           <LabelUpload htmlFor="image">
-            Télécharger votre photo : <br/>
+           Télécharger votre photo
             <UploadInput
               type="file"
               name="image"
+              id="image"
               {...register("image")}
             />
           </LabelUpload>
@@ -42,17 +43,44 @@ function ChooseImg() {
   );
 }
 
+
+
 const UploadInput = styled.input`
     margin-top: 0;
-    width: 10rem;
+    width: 0rem;
     font-size: 0.8em;
     font-family: 'Roboto', sans-serif;
 `
 
 const LabelUpload = styled.label`
     margin: auto;
+    width: 60%;
+    color: white;
+    background-color: #fff;
+    color:#179E9F ;
+    border: 1px solid #179E9F ;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 2px 5px 5px black;
+    text-align: center;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+  }
+    
+   
 `
+const ButtonBg = styled.button`
+padding: 0.5rem;
+font-size: 16px;
+margin-top: 1rem;
+&:hover {
+background-color:#179E9F ;
+border: 1px solid #fff; 
+color: #ffffff;
 
+}
+`
 const Form = styled.form`
     padding: auto;
 `
