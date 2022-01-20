@@ -5,6 +5,11 @@ import styled from 'styled-components';
 function HouseRoomPage() {
     return (
         <>
+            <Link to={'/ToDoPage'} >
+                <ArrowHolder>
+                    <RetourImg src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
             <TextHolder>
                 <h1>Choisissez une pièce </h1>
             </TextHolder>
@@ -62,9 +67,27 @@ function HouseRoomPage() {
     )
 }
 
+
+
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 text-align: center;
 justify-content: center;
 align-items: center;
@@ -115,6 +138,10 @@ overflow: hidden;
 img {
     padding: 5px;
 }
+`
+const RetourImg = styled.img`
+    height: 75%;
+
 `
 
 

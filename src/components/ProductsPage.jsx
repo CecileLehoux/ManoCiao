@@ -5,6 +5,11 @@ import styled from 'styled-components';
 function ProductsPage() {
     return (
         <>
+            <Link to={'/ColorPageCurration'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
             <TextHolder>
                 <h1>Voici votre sélection</h1>
                 <h3>Vos critères : aménagement, salon, meubles de confort, dominante marron</h3>
@@ -18,7 +23,6 @@ function ProductsPage() {
                     <Button>Ajouter au panier</Button>
                     </a>
                     </SousContainer>
-
                 <SousContainer>
                     <a href='https://www.manomano.fr/p/canape-chesterfield-2-places-vintage-15496871'>
                     <p>Canapé Chesterfield 2 Places Vintage</p>
@@ -84,10 +88,26 @@ function ProductsPage() {
     )
 }
 
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 const TextHolder = styled.div`
 display: block;
 text-align: center;
-padding: none;
+padding: 1.5rem;
 `
 const Container = styled.div`
 display: flex;

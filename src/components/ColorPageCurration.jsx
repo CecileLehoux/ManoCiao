@@ -5,6 +5,11 @@ import styled from "styled-components";
 function ColorPageCurration({ image, principal, palette }) {
   return (
     <>
+    <Link to={'/CurrationPage'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+            </Link>
       <TextHolder>
         <h1>Découvrez notre sélection de couleur pour votre intérieur</h1>
         {image}
@@ -56,6 +61,22 @@ justify-content: center;
 align-items: center;
 
 `
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+`
 
 const TextHolder = styled.div`
   display: flex;
@@ -63,7 +84,8 @@ const TextHolder = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: none;
+  margin-top:2rem;
+  padding: 1rem;
   h1 {
     font-size: 1.3rem;
     color: #179e9f;
