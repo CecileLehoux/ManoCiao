@@ -1,11 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
-import React from 'react';
-import GlobalStyle from './globalStyle';
-import Header from'./components/Header';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import GlobalStyle from "./globalStyle";
+import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import HouseRoomPage from "./components/HouseRoomPage";
 import ToDoPage from "./components/ToDoPage";
@@ -15,6 +11,8 @@ import ProductsPage from "./components/ProductsPage";
 // import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
 import CategoryChoice from "./components/CategoryChoice";
+import ColorPageCurration from "./components/ColorPageCurration";
+import ProductsPagePurple from "./components/ProductsPagePurple";
 
 function App() {
   return (
@@ -27,8 +25,10 @@ function App() {
           <Route path="/RoomChoice" element={<HouseRoomPage />} />
           <Route path="/ToDoPage" element={<ToDoPage />} />
           <Route path="/CurrationPage" element={<CurrationPage />} />
-          <Route path="/ColorPage" element={<ColorPage/>} />
-          <Route path="/ProductsPage" element={<ProductsPage/>} />
+          <Route path="/ColorPage" element={<ColorPage />} />
+          <Route path="/ColorPageCurration" element={<ColorPageCurration />} />
+          <Route path="/ProductsPage" element={<ProductsPage />} />
+          <Route path="/ProductsPagePurple" element={<ProductsPagePurple />} />
           <Route path="/ChooseImg" element={<ChooseImg />} />
           <Route path="/CategoryChoice" element={<CategoryChoice />} />
         </Routes>

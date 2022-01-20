@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function ColorPage() {
+function ColorPage({image, principal, palette}) {
   return (
     <>
       <Link to={'/CurrationPage'} >
@@ -11,22 +11,40 @@ function ColorPage() {
                 </ArrowHolder>
       </Link>
       <TextHolder>
+<<<<<<< HEAD
         <h1>Un camaïeu de couleurs</h1>
         <h3>
           Voici un panel de couleurs choisies par nos soins en fonction de
           vos inspirations.
+=======
+        <h1>Découvrez notre sélection de couleur pour votre intérieur</h1>
+        {image}
+        <h3>
+          Voici un panel de couleur séléctionner par nos soins en fonction de
+          vos inspirations
+          
+>>>>>>> dev
         </h3>
       </TextHolder>
 
       <Container>
-        <Image src="../../assets/couleurs.png" alt="panel" />
+        {/* <Image src="../../assets/couleurs.png" alt="panel" /> */}
+        {principal}
+        {palette}
 
+<<<<<<< HEAD
           <h3>Enfin précisez-nous votre budget</h3>
+=======
+        <Budget>
+            <hr/>
+          <h3>Enfin précisez-nous votre budget</h3>
+        </Budget>
+>>>>>>> dev
         <div>
           <Ul>
-            <Li><input type="radio"/>100€ à 250€ </Li>
-            <Li><input type="radio"/>250€ à 500€</Li>
-            <Li><input type="radio"/>500€ à 1000€</Li>
+      
+            <Li><input type="radio"/>100€ à 550€</Li>
+            <Li><input type="radio"/>550€ à 1000€</Li>
             <Li><input type="radio"/>+ de 1000€</Li>
           </Ul>
         </div>
@@ -63,7 +81,14 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+<<<<<<< HEAD
   margin-top: 2.5rem;
+=======
+  h1 {
+      font-size: 1.3rem;
+      color:#179E9F ;
+  }
+>>>>>>> dev
 `;
 
 const Button = styled.button`
@@ -86,8 +111,12 @@ const Container = styled.div`
   margin: 0 auto;
   margin-left: 1rem;
   margin-right: 1rem;
+<<<<<<< HEAD
   padding: .5rem;
   width: 100%;
+=======
+  padding: 1rem;
+>>>>>>> dev
   margin: 0 auto;
   @media screen and (max-width: 880px) {
     width: 90%;
@@ -124,7 +153,14 @@ const active = styled.a`
     border: 1px solid #179E9F ;
 }
 `
-
+const Budget = styled.div`
+margin-top: 2rem;
+hr {
+    width: 80%;
+   background-color : #179E9F;
+   height: 3px;
+}
+`
 
 const Image = styled.img`
   width: 30%;

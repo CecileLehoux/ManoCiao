@@ -11,6 +11,7 @@ function CategoryChoice() {
                 </ArrowHolder>
             </Link>
       <TextHolder>
+        <h1>Aménager votre salon</h1>
         <img
           src="assets/CanapeIcone.png"
           alt="canape"
@@ -71,6 +72,7 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+  color:#179e9f;
 `;
 
 const ChoicesContainer = styled.div`
@@ -80,12 +82,17 @@ const ChoicesContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: flex-start;
-  background-color: #179e9f;
   border-radius: 10px;
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 1rem;
   height: 80%;
+  @media screen and (min-width: 880px) {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 2rem;
+}
 `;
 
 const ChoiceHolder = styled.div`
@@ -103,6 +110,7 @@ const ChoiceHolder = styled.div`
 const IconHolder = styled.div`
   border-radius: 50%;
   background-color: white;
+  border: 1px solid #179e9f;
   width: 8rem;
   height: 8rem;
   display: flex;
@@ -118,6 +126,7 @@ const TitleIcon = styled.h1`
   text-align: center;
   color: black;
   font-size: 14px;
+  color:#179e9f;
 `;
 
 export default CategoryChoice;

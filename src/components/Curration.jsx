@@ -15,7 +15,7 @@ function CurrationPage() {
                 <h3>En fonction de votre choix nous allons vous séléctionner un panel de couleur et de meubles assortis</h3>
             </TextHolder>
             <Container>
-            <Link to={'/ColorPage'} >
+            <Link to={'/ColorPageCurration'} >
                 <div>
                     <Title2>Salon industriel</Title2>
                     <Image src="../../assets/images/salon-industriel.jpeg" alt='salon1'/> </div>
