@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
 import ColorPicker from "./ColorPicker";
-import './button.css';
+import "./button.css";
 
 function ChooseColor() {
   const [woodSelectedButton, setWoodSelectedButton] = useState(true);
@@ -12,20 +12,20 @@ function ChooseColor() {
   const [metalSelectedButton, setMetalSelectedButton] = useState(true);
 
   const woodOnClick = () => {
-    setWoodSelectedButton(!woodSelectedButton)
-  }
+    setWoodSelectedButton(!woodSelectedButton);
+  };
   const pvcOnClick = () => {
-    setPvcSelectedButton(!pvcSelectedButton)
-  }
+    setPvcSelectedButton(!pvcSelectedButton);
+  };
   const resineOnClick = () => {
-    setResineSelectedButton(!resineSelectedButton)
-  }
+    setResineSelectedButton(!resineSelectedButton);
+  };
   const stoneOnClick = () => {
-    setStoneSelectedButton(!stoneSelectedButton)
-  }
+    setStoneSelectedButton(!stoneSelectedButton);
+  };
   const metalOnClick = () => {
-    setMetalSelectedButton(!metalSelectedButton)
-  }
+    setMetalSelectedButton(!metalSelectedButton);
+  };
 
   return (
     <div>
@@ -42,23 +42,43 @@ function ChooseColor() {
       </SelectionContainer>
       <SelectionContainer>
         <h2>2. Sélectionnez des matériaux</h2>
-        <div>
-          <button class={woodSelectedButton ? "choosenbutton" : "clickedbutton"} onClick={woodOnClick} type="button">
+        <ButtonContainer>
+          <button
+            class={woodSelectedButton ? "choosenbutton" : "clickedbutton"}
+            onClick={woodOnClick}
+            type="button"
+          >
             Bois
           </button>
-          <button class={pvcSelectedButton ? "choosenbutton" : "clickedbutton"} onClick={pvcOnClick} type="button">
+          <button
+            class={pvcSelectedButton ? "choosenbutton" : "clickedbutton"}
+            onClick={pvcOnClick}
+            type="button"
+          >
             PVC
           </button>
-          <button class={resineSelectedButton ? "choosenbutton" : "clickedbutton"} onClick={resineOnClick} type="button">
+          <button
+            class={resineSelectedButton ? "choosenbutton" : "clickedbutton"}
+            onClick={resineOnClick}
+            type="button"
+          >
             Résine
           </button>
-          <button class={stoneSelectedButton ? "choosenbutton" : "clickedbutton"} onClick={stoneOnClick} type="button">
+          <button
+            class={stoneSelectedButton ? "choosenbutton" : "clickedbutton"}
+            onClick={stoneOnClick}
+            type="button"
+          >
             Pierre
           </button>
-          <button class={metalSelectedButton ? "choosenbutton" : "clickedbutton"} onClick={metalOnClick} type="button">
+          <button
+            class={metalSelectedButton ? "choosenbutton" : "clickedbutton"}
+            onClick={metalOnClick}
+            type="button"
+          >
             Métal
           </button>
-        </div>
+        </ButtonContainer>
       </SelectionContainer>
       <SelectionContainer>
         <h2>3. Sélectionnez une gamme de prix</h2>
@@ -78,11 +98,11 @@ function ChooseColor() {
           </Ul>
         </div>
       </SelectionContainer>
-      <SelectionContainer>
+      <LinkContainer>
         <Link to="/ProductsPagePurple">
           <Button type="button">Valider</Button>
         </Link>
-      </SelectionContainer>
+      </LinkContainer>
     </div>
   );
 }
@@ -91,9 +111,9 @@ const Ul = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 0 2rem;
   @media screen and (max-width: 880px) {
     flex-direction: column;
     margin-bottom: 5px;
@@ -102,6 +122,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style-type: none;
   text-decoration: none;
+  text-align: center;
   border: 1px solid #179e9f;
   border-radius: 10px;
   padding: 1rem;
@@ -116,7 +137,8 @@ const SelectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  margin: 0 2rem;
 `;
 
 const TextHolder = styled.div`
@@ -129,9 +151,16 @@ const TextHolder = styled.div`
   font-size: 12px;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 const Button = styled.button`
-  padding: 1rem;
-  margin: 0 0.5rem;
+  width: 100%;
+  padding: 1rem 7rem;
+  margin: -10px auto 2rem;
   background-color: #179e9f;
   border: 1px solid #fff;
   color: #ffffff;
@@ -144,5 +173,10 @@ const Button = styled.button`
     border: 1px solid #179e9f;
   }
 `;
+
+const LinkContainer = styled.div`
+display: flex;
+justify-content: center;
+`
 
 export default ChooseColor;
