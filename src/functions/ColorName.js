@@ -2,21 +2,23 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Ajouter l'hex de la couleur récupérée en props
-const ColorName = () => {
+const ColorName = (hexcolor) => {
   const [colorHSVFromHex, setColorHSVFromHex] = useState([]);
   const [colorName, setColorName] = useState("");
-
+  
   useEffect(() => {
+    const transformHexColor = (hexcolor.hexcolor).replace('#', '');
+    console.log(transformHexColor);
     axios
       // Remplacer la couleur hex en dur par la props
-      .get(`https://www.thecolorapi.com/id?hex=#dec014)`)
+      .get(`https://www.thecolorapi.com/id?hex=${transformHexColor})`)
       .then((res) => res.data)
       .then((data) => setColorHSVFromHex([data.hsv.h, data.hsv.s, data.hsv.v]))
-      .then(console.log(colorHSVFromHex))
       .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
+    // console.log(hexcolor.hexcolor, colorHSVFromHex)
     if (colorHSVFromHex[1] === 0 && colorHSVFromHex[2] > 95) {
       setColorName("Blanc");
     } else if (colorHSVFromHex[1] === 0 && colorHSVFromHex[2] < 5) {
@@ -53,9 +55,7 @@ const ColorName = () => {
   }, [colorHSVFromHex]);
 
   return (
-    <div>
-      <p>{colorName}</p>
-    </div>
+    <>{colorName}</>
   );
 };
 

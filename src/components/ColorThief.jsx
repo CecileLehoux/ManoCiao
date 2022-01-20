@@ -1,12 +1,13 @@
 import Color, { Palette } from "color-thief-react";
 import styled from "styled-components";
 import ColorName from "../functions/ColorName";
+import ColorPicker from "./ColorPicker";
 
 
 const Loading = () => <div>Loading...</div>;
 
 const ColorThief = () => {
-  const imgSrc = "http://ekladata.com/kRyR4CJUacmCnlEc-_pILyWpo0s@390x318.jpg";
+  const imgSrc = "assets/cuisine.jpg";
   return (
     <ColorThiefContainer>
       <img src={imgSrc} alt="" />
@@ -15,7 +16,7 @@ const ColorThief = () => {
           if (loading) return <Loading />;
           return (
             <div>
-              La couleur principale est : <strong style={{ color: data }}>{data}</strong>
+              La couleur principale est : <strong style={{ color: data }}><ColorName hexcolor={data} /> ({data})</strong>
             </div>
           );
         }}
@@ -29,7 +30,7 @@ const ColorThief = () => {
               <ul>
                 {data.map((color, index) => (
                   <li key={index} style={{ color: color }}>
-                    <strong>{color}</strong>
+                    <strong><ColorName hexcolor={color} /> ({color})</strong>
                   </li>
                 ))}
               </ul>
@@ -37,7 +38,7 @@ const ColorThief = () => {
           );
         }}
       </Palette>
-      <ColorName />
+      <ColorPicker />
     </ColorThiefContainer>
   );
 };
