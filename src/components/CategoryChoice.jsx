@@ -1,34 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
-function ToDoPage() {
+function CategoryChoice() {
   return (
     <>
       <TextHolder>
-        <h1>Que souhaitez-vous faire ?</h1>
+        <img
+          src="assets/CanapeIcone.png"
+          alt="canape"
+          width="100px"
+          height="100px"
+        />{" "}
+        <br />
+        Que recherchez vous ?
       </TextHolder>
       <ChoicesContainer>
         <ChoiceHolder>
-          <h3>#Rénovation</h3>
           <IconHolder>
-            <Link to="/CategoryChoice">
-              <img src="assets/PinceauIcone.png" alt="exterieur" width="65%" />
+            <TitleIcon>Luminaires</TitleIcon>
+          </IconHolder>
+        </ChoiceHolder>
+        <ChoiceHolder>
+          <IconHolder>
+            <Link to="/ChooseImg">
+              <TitleIcon>Meubles de confort</TitleIcon>
             </Link>
           </IconHolder>
         </ChoiceHolder>
         <ChoiceHolder>
-          <h3>#Réparation</h3>
           <IconHolder>
-            <img src="assets/MarteauIcone.png" alt="interieur" width="75%" />
+            <TitleIcon>Table et chaises</TitleIcon>
           </IconHolder>
         </ChoiceHolder>
         <ChoiceHolder>
-          <h3>#Staging</h3>
           <IconHolder>
-            <Link to="/CategoryChoice">
-              <img src="assets/lampeIcone.png" alt="interieur" width="75%" />
-            </Link>
+            <TitleIcon>Buffets et consoles</TitleIcon>
           </IconHolder>
         </ChoiceHolder>
       </ChoicesContainer>
@@ -42,34 +49,36 @@ const TextHolder = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: none;
 `;
+
 const ChoicesContainer = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
   background-color: #179e9f;
   border-radius: 10px;
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 1rem;
-  padding-bottom: 2rem;
+  height: 80%;
 `;
+
 const ChoiceHolder = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  h3 {
-    color: white;
-    font-weight: bold;
-    font-size: x-large;
-  }
+  margin-bottom: 20px;
   &:hover {
     transform: scale(1.1);
     transition: 0.3s;
   }
 `;
+
 const IconHolder = styled.div`
   border-radius: 50%;
   background-color: white;
@@ -84,4 +93,10 @@ const IconHolder = styled.div`
   }
 `;
 
-export default ToDoPage;
+const TitleIcon = styled.h1`
+  text-align: center;
+  color: black;
+  font-size: 14px;
+`;
+
+export default CategoryChoice;
