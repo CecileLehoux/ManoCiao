@@ -3,9 +3,9 @@ import Color, { Palette } from "color-thief-react";
 
 const Loading = () => <div>Loading...</div>;
 
-const ColorThief = ({imageUrl}) => {
-        const imgSrc =`/assets/${imageUrl}`
-    ;
+const ColorThief = (imageUrl) => {
+        const imgSrc =imageUrl.imageUrl;
+        console.log(imageUrl.imageUrl)
   return (
     <div>
         <img src={imgSrc} alt="" />

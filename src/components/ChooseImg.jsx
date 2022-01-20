@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UploadImg from "../datas/uploadImg";
 import ColorThief from "./ColorThief";
 
@@ -9,11 +9,13 @@ function ChooseImg() {
 
   const imgData = new FormData();
 
+  
   const postImg = (data) => {
-    const image = data.image[0];
-    imgData.append("image", image);
-
-    UploadImg(imgData, setImage);
+    const imaget = data.image[0];
+    imgData.append("image", imaget);
+    setImage(imaget)
+    console.log(image)
+    // UploadImg(imgData, setImage);
   };
 
   return (
@@ -25,7 +27,7 @@ function ChooseImg() {
             <input
               type="file"
               name="image"
-              {...register("image", { required: true })}
+              {...register("image")}
             />
           </label>
           <br />
@@ -34,7 +36,7 @@ function ChooseImg() {
           <input type="submit" />
         </div>
       </form>
-      {image && <ColorThief imageUrl={image} />}
+      {image && <ColorThief imageUrl={"/assets/"+image.name} />}
     </div>
   );
 }
