@@ -19,8 +19,6 @@ import CategoryChoice from "./components/CategoryChoice";
 function App() {
   return (
     <div className="App">
-      {/* <DragAndDrop/> */}
-      {/* <ColorThief /> */}
       <GlobalStyle />
       <Router>
         <Header />
