@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import UploadImg from "../datas/uploadImg";
 import ColorThief from "./ColorThief";
 import styled from "styled-components";
+import ColorPage from "./ColorPage";
 
 function ChooseImg() {
   const { register, handleSubmit } = useForm();
@@ -23,14 +24,7 @@ function ChooseImg() {
   return (
 
     <div>
-        <TextHolder>
-        <h1>Avez-vous une inspiration à nous partager ?</h1>
-        <h3>
-         En fonction de votre photo, nous selectionnerons un panel de couleur
-        </h3>
-      </TextHolder>
-      <Container>
-      <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
+      {!image && <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
         <div>
           <LabelUpload htmlFor="image">
             Télécharger votre photo : <br/>
@@ -45,7 +39,7 @@ function ChooseImg() {
         <div>
           <InputSubmit value="Envoyer" type="submit" />
         </div>
-      </Form>
+      </Form>}
       {image && <ColorThief imageUrl={"/assets/"+image.name} />}
     <Link to ="/CurrationPage">
       <ButtonBg>Je n'ai pas d'idée, <br/>je fais confiance à Mano Mano</ButtonBg>

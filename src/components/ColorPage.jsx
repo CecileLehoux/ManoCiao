@@ -2,20 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function ColorPage() {
+function ColorPage({image, principal, palette}) {
   return (
     <>
       <TextHolder>
         <h1>Notre sélection de couleur</h1>
+        {image}
         <h3>
           Voici un panel de couleur séléctionner par nos soins en fonction de
           vos inspirations
+          
         </h3>
       </TextHolder>
 
       <Container>
-        <Image src="../../assets/couleurs.png" alt="panel" />
-
+        {/* <Image src="../../assets/couleurs.png" alt="panel" /> */}
+        {principal}
+        {palette}
         <div>
           <h3>Enfin precisez-nous votre budget</h3>
         </div>
