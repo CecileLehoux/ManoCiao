@@ -9,7 +9,7 @@ function HouseRoomPage() {
                 <h1>Choisissez une pièce </h1>
             </TextHolder>
             <ChoicesContainer>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Chambre</h3>
                         <IconHolder>
@@ -17,7 +17,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Salle de bain</h3>
                         <IconHolder>
@@ -25,7 +25,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Cuisine</h3>
                         <IconHolder>
@@ -33,7 +33,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Salon</h3>
                         <IconHolder>
@@ -41,7 +41,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Toilettes</h3>
                         <IconHolder>
@@ -49,7 +49,7 @@ function HouseRoomPage() {
                         </IconHolder>
                     </ChoiceHolder>
                     </Link>
-                    <Link to={'/ToDoPage'} >
+                    <Link to={'/CategoryChoice'} >
                     <ChoiceHolder>
                         <h3>Bureau</h3>
                         <IconHolder>
