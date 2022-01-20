@@ -69,13 +69,13 @@ text-align: center;
 justify-content: center;
 align-items: center;
 padding: none;
+font-size: 13px;
 `
 const ChoicesContainer = styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
-background-color: #179E9F;
 border-radius: 10px;
 margin-left: 1rem;
 margin-right: 1rem;
@@ -88,7 +88,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 h3 {
-    color: white;
+    color: #179E9F;
     font-weight: bold;
     font-size: large;
 }
@@ -100,6 +100,7 @@ h3 {
 const IconHolder = styled.div`
 border-radius: 50%;
 background-color: white;
+border: 1px solid #179E9F;
 width: 8rem;
 height: 8rem;
 display: flex;
