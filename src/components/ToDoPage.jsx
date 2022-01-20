@@ -11,13 +11,13 @@ function ToDoPage() {
             </TextHolder>
             <ChoicesContainer>
                     <ChoiceHolder>   
-                        <h3>#Rénovation</h3>
+                        <h3>Rénovation</h3>
                         <IconHolder>
                             <img src='assets/PinceauIcone.png' alt='exterieur' width='65%' />
                         </IconHolder>
                     </ChoiceHolder>
                     <ChoiceHolder>
-                        <h3>#Staging</h3>
+                        <h3>Aménagement</h3>
                         <IconHolder>
                             <img src='assets/lampeIcone.png' alt='interieur' width='75%' />
                         </IconHolder>
@@ -47,12 +47,7 @@ function ToDoPage() {
     )
 
 }
-//<ChoiceHolder>
-  //                      <h3>#Réparation</h3>
-    //                    <IconHolder>
-      //                      <img src='assets/MarteauIcone.png' alt='interieur' width='75%' />
-        //                </IconHolder>
-          //          </ChoiceHolder>
+
 const TextHolder = styled.div`
     display: flex;
     flex-direction: column;
@@ -70,7 +65,11 @@ const ChoicesContainer = styled.div`
     border-radius: 10px;
     margin: 1rem;
     padding: 1rem;
-    padding-bottom: 2rem
+    padding-bottom: 2rem;
+    @media screen and (min-width: 880px) {
+    width: 30%;
+    margin:0 auto;
+}
 `
 
 const ChoiceHolder = styled.div`
@@ -91,6 +90,10 @@ const ChoiceHolder = styled.div`
     &:hover h3 {
         color: #1e3c87;
     }
+    @media screen and (min-width: 880px) {
+    width: 40%;
+    margin:0 auto;
+}
 `
 
 const IconHolder = styled.div`

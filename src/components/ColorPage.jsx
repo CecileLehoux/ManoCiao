@@ -2,28 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function ColorPage() {
+function ColorPage({image, principal, palette}) {
   return (
     <>
       <TextHolder>
         <h1>Notre sélection de couleur</h1>
+        {image}
         <h3>
           Voici un panel de couleur séléctionner par nos soins en fonction de
           vos inspirations
+          
         </h3>
       </TextHolder>
 
       <Container>
-        <Image src="../../assets/couleurs.png" alt="panel" />
-
+        {/* <Image src="../../assets/couleurs.png" alt="panel" /> */}
+        {principal}
+        {palette}
         <div>
           <h3>Enfin precisez-nous votre budget</h3>
         </div>
         <div>
           <Ul>
-            <Li><input type="radio"/>100€ à 250€ </Li>
-            <Li><input type="radio"/>250€ à 500€</Li>
-            <Li><input type="radio"/>500€ à 1000€</Li>
+      
+            <Li><input type="radio"/>100€ à 550€</Li>
+            <Li><input type="radio"/>550€ à 1000€</Li>
             <Li><input type="radio"/>+ de 1000€</Li>
           </Ul>
         </div>

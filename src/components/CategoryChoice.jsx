@@ -6,7 +6,7 @@ function CategoryChoice() {
   return (
     <>
       <TextHolder>
-        <h2>Aménager votre salon</h2>
+        <h1>Aménager votre salon</h1>
         <img
           src="assets/CanapeIcone.png"
           alt="canape"
@@ -51,6 +51,7 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
+  color:#179e9f;
 `;
 
 const ChoicesContainer = styled.div`
@@ -65,6 +66,12 @@ const ChoicesContainer = styled.div`
   margin-right: 1rem;
   padding: 1rem;
   height: 80%;
+  @media screen and (min-width: 880px) {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 2rem;
+}
 `;
 
 const ChoiceHolder = styled.div`
@@ -98,6 +105,7 @@ const TitleIcon = styled.h1`
   text-align: center;
   color: black;
   font-size: 14px;
+  color:#179e9f;
 `;
 
 export default CategoryChoice;
