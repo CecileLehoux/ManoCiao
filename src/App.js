@@ -11,6 +11,7 @@ import HouseRoomPage from "./components/HouseRoomPage";
 import ToDoPage from "./components/ToDoPage";
 // import ColorThief from "./components/ColorThief";
 import ChooseImg from "./components/ChooseImg";
+import CategoryChoice from "./components/CategoryChoice";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/RoomChoice" element={<HouseRoomPage />} />
           <Route path="/ToDoPage" element={<ToDoPage />} />
           <Route path="/ChooseImg" element={<ChooseImg />} />
+          <Route path="/CategoryChoice" element={<CategoryChoice />} />
         </Routes>
       </Router>
     </div>
