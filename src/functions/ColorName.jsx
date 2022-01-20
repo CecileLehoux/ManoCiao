@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-// Ajouter l'hex de la couleur récupérée en props
 const ColorName = (hexcolor) => {
   const [colorHSVFromHex, setColorHSVFromHex] = useState([]);
   const [colorName, setColorName] = useState("");
-  
+
   useEffect(() => {
-    const transformHexColor = (hexcolor.hexcolor).replace('#', '');
-    console.log(transformHexColor);
+    const transformHexColor = hexcolor.hexcolor.replace("#", "");
     axios
-      // Remplacer la couleur hex en dur par la props
       .get(`https://www.thecolorapi.com/id?hex=${transformHexColor}`)
       .then((res) => res.data)
       .then((data) => setColorHSVFromHex([data.hsv.h, data.hsv.s, data.hsv.v]))
@@ -18,16 +15,11 @@ const ColorName = (hexcolor) => {
   }, []);
 
   useEffect(() => {
-    // console.log(hexcolor.hexcolor, colorHSVFromHex)
-    if (colorHSVFromHex[1] >= 90) {
+    if (colorHSVFromHex[1] >= 95) {
       setColorName("Blanc");
-    } else if (colorHSVFromHex[1] <= 10) {
+    } else if (colorHSVFromHex[1] <= 10 && (colorHSVFromHex[2] >= 10 && colorHSVFromHex[2] <= 80 )) {
       setColorName("Noir");
-    } else if (
-      colorHSVFromHex[1] === 0 &&
-      colorHSVFromHex[2] >= 5 &&
-      colorHSVFromHex[2] <= 95
-    ) {
+    } else if (colorHSVFromHex[1] === 0 && (colorHSVFromHex[2] >= 10 || colorHSVFromHex[2] <= 80 )) {
       setColorName("Gris");
     } else if (
       (colorHSVFromHex[0] >= 0 && colorHSVFromHex[0] <= 15) ||
@@ -54,9 +46,7 @@ const ColorName = (hexcolor) => {
     }
   }, [colorHSVFromHex]);
 
-  return (
-    <>{colorName}</>
-  );
+  return <>{colorName}</>;
 };
 
 export default ColorName;

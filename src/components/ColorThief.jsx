@@ -6,7 +6,7 @@ import ColorName from "../functions/ColorName";
 const Loading = () => <div>Loading...</div>;
 
 const ColorThief = () => {
-  const imgSrc = "assets/cuisine.jpg";
+  const imgSrc = "http://ekladata.com/kRyR4CJUacmCnlEc-_pILyWpo0s@390x318.jpg";
   return (
     <ColorThiefContainer>
       <img src={imgSrc} alt="" />

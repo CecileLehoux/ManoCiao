@@ -45,17 +45,14 @@ const ColorPickerContainer = (props) => (
 
 const ColorPicker = () => {
   const [color, setColor] = useState("#FFFFFF");
-  const [hexFromColor, setHexFromColor] = useState("#FFFFFF");
 
   const handleInput = (e) => {
     setColor(e.target.value);
-    setHexFromColor(e.target.value);
   };
 
   return (
     <div className="App">
       <ColorPickerContainer onChange={handleInput} value={color} />
-      <ColorName hexcolor={hexFromColor} />
     </div>
   );
 };
