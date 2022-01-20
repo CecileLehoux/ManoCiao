@@ -22,6 +22,11 @@ function ChooseImg() {
 
   return (
     <div>
+      <Link to={'/CategoryChoice'} >
+                <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+      </Link>
       <TextHolder>
         <h1>Avez-vous une inspiration à nous partager ?</h1>
         <h3>
@@ -83,12 +88,6 @@ const ArrowHolder = styled.div`
     transition: 0.3s;
 }
 `
-const UploadInput = styled.input`
-    margin-top: 0;
-    width: 10rem;
-    font-size: 0.8em;
-    font-family: 'Roboto', sans-serif;
-`
 const CarreBleu = styled.div`
   padding: 3rem;
   border-radius: 10px;
@@ -97,7 +96,7 @@ const CarreBleu = styled.div`
   flex-direction: column;
   align-content: center;
   margin: auto;
-`;
+  `;
 
 const LabelUpload = styled.label`
   margin: auto;
@@ -114,7 +113,7 @@ const LabelUpload = styled.label`
     transform: scale(1.1);
     transition: 0.3s;
   }
-`;
+  `;
 
 const UploadInput = styled.input`
   margin-top: 0;
@@ -122,7 +121,8 @@ const UploadInput = styled.input`
   font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   outline-style: none;
-`;
+  `;
+  
 const Container = styled.div`
   text-align: center;
   display: flex;

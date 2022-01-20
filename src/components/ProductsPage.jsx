@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function ProductsPage() {
     return (
         <>
-            <Link to={'/'} >
+            <Link to={'/ColorPageCurration'} >
                 <ArrowHolder>
                     <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
                 </ArrowHolder>

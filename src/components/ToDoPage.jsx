@@ -52,7 +52,6 @@ function ToDoPage() {
     )
 
 }
-<<<<<<< HEAD
 //<ChoiceHolder>
   //                      <h3>#Réparation</h3>
     //                    <IconHolder>
@@ -78,9 +77,6 @@ const ArrowHolder = styled.div`
     transition: 0.3s;
 }
 `
-=======
-
->>>>>>> dev
 const TextHolder = styled.div`
     display: flex;
     flex-direction: column;

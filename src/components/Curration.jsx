@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function CurrationPage() {
     return (
         <>
-        <Link to={'/ToDoPage'} >
+        <Link to={'/ChooseImg'} >
                 <ArrowHolder>
                     <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
                 </ArrowHolder>

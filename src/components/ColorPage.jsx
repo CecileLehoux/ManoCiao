@@ -11,19 +11,11 @@ function ColorPage({image, principal, palette}) {
                 </ArrowHolder>
       </Link>
       <TextHolder>
-<<<<<<< HEAD
         <h1>Un camaïeu de couleurs</h1>
+        {image}
         <h3>
           Voici un panel de couleurs choisies par nos soins en fonction de
           vos inspirations.
-=======
-        <h1>Découvrez notre sélection de couleur pour votre intérieur</h1>
-        {image}
-        <h3>
-          Voici un panel de couleur séléctionner par nos soins en fonction de
-          vos inspirations
-          
->>>>>>> dev
         </h3>
       </TextHolder>
 
@@ -32,14 +24,10 @@ function ColorPage({image, principal, palette}) {
         {principal}
         {palette}
 
-<<<<<<< HEAD
-          <h3>Enfin précisez-nous votre budget</h3>
-=======
         <Budget>
             <hr/>
           <h3>Enfin précisez-nous votre budget</h3>
         </Budget>
->>>>>>> dev
         <div>
           <Ul>
       
@@ -81,14 +69,11 @@ const TextHolder = styled.div`
   justify-content: center;
   align-items: center;
   padding: none;
-<<<<<<< HEAD
   margin-top: 2.5rem;
-=======
   h1 {
       font-size: 1.3rem;
       color:#179E9F ;
   }
->>>>>>> dev
 `;
 
 const Button = styled.button`
@@ -111,12 +96,7 @@ const Container = styled.div`
   margin: 0 auto;
   margin-left: 1rem;
   margin-right: 1rem;
-<<<<<<< HEAD
-  padding: .5rem;
-  width: 100%;
-=======
   padding: 1rem;
->>>>>>> dev
   margin: 0 auto;
   @media screen and (max-width: 880px) {
     width: 90%;
