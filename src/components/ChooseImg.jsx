@@ -12,50 +12,47 @@ function ChooseImg() {
 
   const imgData = new FormData();
 
-  
   const postImg = (data) => {
     const imaget = data.image[0];
     imgData.append("image", imaget);
-    setImage(imaget)
-    console.log(image)
+    setImage(imaget);
+    console.log(image);
     // UploadImg(imgData, setImage);
   };
 
   return (
-
     <div>
-      {!image && <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
-        <div>
-          <LabelUpload htmlFor="image">
-            Télécharger votre photo : <br/>
-            <UploadInput
-              type="file"
-              name="image"
-              {...register("image")}
-            />
-          </LabelUpload>
-          <br />
-        </div>
-        <div>
-          <InputSubmit value="Envoyer" type="submit" />
-        </div>
-      </Form>}
-      {image && <ColorThief imageUrl={"/assets/"+image.name} />}
-    <Link to ="/CurrationPage">
-      <ButtonBg>Je n'ai pas d'idée, <br/>je fais confiance à Mano Mano</ButtonBg>
-    </Link>
-      </Container>
+      {!image && (
+        <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
+          <div>
+            <LabelUpload htmlFor="image">
+              Télécharger votre photo : <br />
+              <UploadInput type="file" name="image" {...register("image")} />
+            </LabelUpload>
+            <br />
+          </div>
+          <div>
+            <InputSubmit value="Envoyer" type="submit" />
+          </div>
+        </Form>
+      )}
+      {image && <ColorThief imageUrl={"/assets/" + image.name} />}
+      <Link to="/CurrationPage">
+        <ButtonBg>
+          Je n'ai pas d'idée, <br />
+          je fais confiance à Mano Mano
+        </ButtonBg>
+      </Link>
+    </div>
   );
-</div>
-  )
 }
 
 const UploadInput = styled.input`
-    margin-top: 0;
-    width: 10rem;
-    font-size: 0.8em;
-    font-family: 'Roboto', sans-serif;
-    outline-style: none;
+  margin-top: 0;
+  width: 10rem;
+  font-size: 0.8em;
+  font-family: "Roboto", sans-serif;
+  outline-style: none;
 `;
 const Container = styled.div`
   text-align: center;
@@ -68,36 +65,36 @@ const Container = styled.div`
   margin: 0 auto;
   @media screen and (max-width: 880px) {
     width: 90%;
-}
+  }
 `;
 
 const LabelUpload = styled.label`
-    margin: auto;
-    margin-top: 2rem;
-    line-height: 2rem;
-`
+  margin: auto;
+  margin-top: 2rem;
+  line-height: 2rem;
+`;
 
 const Form = styled.form`
-    padding: auto;
-`
+  padding: auto;
+`;
 
 const InputSubmit = styled.input`
-    margin: 1em auto;
-    width: 10rem;
-    color: white;
-    border: 0;
-    background-color: #179E9F ;
-    border-radius: 10px;
-    font-size: 1.3em;
-    padding: 1rem;
-    font-family: 'Roboto', sans-serif;
-    &:hover {
-        transform: scale(1.1);
-        transition: 0.3s;
-    }
-    `
+  margin: 1em auto;
+  width: 10rem;
+  color: white;
+  border: 0;
+  background-color: #179e9f;
+  border-radius: 10px;
+  font-size: 1.3em;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+`;
 
-  const TextHolder = styled.div`
+const TextHolder = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -108,33 +105,32 @@ const InputSubmit = styled.input`
 `;
 
 const Button = styled.button`
-padding: 0.5rem;
-background-color:#179E9F ;
-border: 1px solid #fff; 
-color: #ffffff;
-border-radius:10px;
-font-size: 16px;
-margin-top: 1rem;
-&:hover {
+  padding: 0.5rem;
+  background-color: #179e9f;
+  border: 1px solid #fff;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 1rem;
+  &:hover {
     background-color: #fff;
-    color:#179E9F ;
-    border: 1px solid #179E9F ;
-}
-`
+    color: #179e9f;
+    border: 1px solid #179e9f;
+  }
+`;
 const ButtonBg = styled.button`
-padding: 0.5rem;
-background-color: #fff;
-    color:#179E9F ;
-    border: 1px solid #179E9F ;
-border-radius:10px;
-font-size: 16px;
-margin-top: 1rem;
-&:hover {
-    
-    background-color:#179E9F ;
-border: 1px solid #fff; 
-color: #ffffff;
-}
-`
+  padding: 0.5rem;
+  background-color: #fff;
+  color: #179e9f;
+  border: 1px solid #179e9f;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 1rem;
+  &:hover {
+    background-color: #179e9f;
+    border: 1px solid #fff;
+    color: #ffffff;
+  }
+`;
 
 export default ChooseImg;
