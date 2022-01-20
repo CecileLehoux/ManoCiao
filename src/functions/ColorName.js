@@ -19,9 +19,9 @@ const ColorName = (hexcolor) => {
 
   useEffect(() => {
     // console.log(hexcolor.hexcolor, colorHSVFromHex)
-    if (colorHSVFromHex[2] > 85) {
+    if (colorHSVFromHex[1] >= 90) {
       setColorName("Blanc");
-    } else if (colorHSVFromHex[2] < 15) {
+    } else if (colorHSVFromHex[1] <= 10) {
       setColorName("Noir");
     } else if (
       colorHSVFromHex[1] === 0 &&

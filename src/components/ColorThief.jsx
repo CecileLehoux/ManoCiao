@@ -1,7 +1,6 @@
 import Color, { Palette } from "color-thief-react";
 import styled from "styled-components";
 import ColorName from "../functions/ColorName";
-import ColorPicker from "./ColorPicker";
 
 
 const Loading = () => <div>Loading...</div>;
@@ -28,7 +27,7 @@ const ColorThief = () => {
             <div>
               Les couleurs à associer sont :
               <ul>
-                {data.slice(1).map((color, index) => (
+                {data.map((color, index) => (
                   <li key={index} style={{ color: color }}>
                     <strong><ColorName hexcolor={color} /> ({color})</strong>
                   </li>
@@ -38,7 +37,6 @@ const ColorThief = () => {
           );
         }}
       </Palette>
-      <ColorPicker />
     </ColorThiefContainer>
   );
 };
