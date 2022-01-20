@@ -13,6 +13,7 @@ function ProductsPage() {
                 <SousContainer>
                     <a href="https://www.manomano.fr/p/dan-canape-droit-3-places-convertible-style-industriel-avec-coffre-de-rangement-couleur-marron-17937353">
                 <p>Dan - Canapé droit 3 places convertible - style industriel</p>
+                <Black><b>393,99€</b></Black>
                     <Image src='../../assets/images/canape-marron.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </a>
@@ -21,6 +22,7 @@ function ProductsPage() {
                 <SousContainer>
                     <a href='https://www.manomano.fr/p/canape-chesterfield-2-places-vintage-15496871'>
                     <p>Canapé Chesterfield 2 Places Vintage</p>
+                    <Black><b>499,00€</b></Black>
                     <Image src='../../assets/images/canape-marron-fonce.png' alt='salon1'/>
                     <Button>Ajouter au panier</Button>
                     </a>
@@ -28,6 +30,7 @@ function ProductsPage() {
                 <SousContainer>
                     <a href='https://www.manomano.fr/p/table-basse-table-de-salon-avec-etagere-en-maille-large-espace-de-rangement-montage-facile-stable-style-industriel-marron-rustique-lct64x-19312430'>
                     <p>Table Basse, style industriel</p>
+                    <Black><b>76,99€</b></Black>
                     <Image src='../../assets/images/table-basse.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </a>
@@ -36,6 +39,7 @@ function ProductsPage() {
                 <SousContainer>
                 <a href='https://www.manomano.fr/p/vidaxl-fauteuil-marron-73-x-72-76-cm-4026523'>
                 <p>Fauteuil Marron Similicuir daim</p>
+                <Black><b>163,99€</b></Black>
                     <Image src='../../assets/images/fauteuil.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </a>
@@ -46,27 +50,31 @@ function ProductsPage() {
                 <h2>Les produits complémentaires</h2>
                 </TextHolder>
             <Container>
-                <SousContainer>
+                <SousContainer2>
                     <a href='https://www.manomano.fr/catalogue/p/bosch-easydrill1200-22916773'>
                     <p>Bosch Perceuse sans-fil EasyDrill 1200 1 batterie 1,5 Ah</p>
+                    <Black><b>93,59€</b></Black>
                     <Image src='../../assets/images/visseuse.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </a>
-                    </SousContainer>
-                <SousContainer>
+                    </SousContainer2>
+                <SousContainer2>
                     <a href='https://www.manomano.fr/p/chariot-diable-dolmar-pour-coffret-makpac---tr00000001-----40047816'>
                     <p>Chariot de transport diable bleu et noir - MAKITA TR00000001</p>
+                    <Black><b>83,92€</b></Black>
                     <Image src='../../assets/images/diable.png' alt='salon1'/>
                     <Button>Ajouter au panier</Button>
                     </a>
-                     </SousContainer>
-                <SousContainer>
+                     </SousContainer2>
+                <SousContainer2>
                     <a href ="https://www.manomano.fr/p/coffret-ergokraft-kraftwerk-3795-38-insertion-avec-embouts-1-4-1937818">
                     <p>Coffret Ergokraft KRAFTWERK Tournevis porte-embouts 138 Outils</p>
+                    <Black><b>26,09€</b></Black>
                     <Image src='../../assets/images/tournevis.png' alt='salon1'/> 
                     <Button>Ajouter au panier</Button>
                     </a>
-                    </SousContainer>
+                    </SousContainer2>
+                
               
            </Container>
            
@@ -97,20 +105,46 @@ gap: 4rem;
     width: 80%;
 }
 `
+const Black = styled.p`
+color : #000000;
+`
+
 const SousContainer = styled.div`
 justify-content: space-around;
-width: 30%;
+width: 38%;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius: 10px;
 padding: 1rem;
 text-align:center;
+a {
+    text-decoration: none;
+    color: #179E9F;
+}
 @media screen and (max-width: 880px) {
     width: 85%;
 }
-
-
 ;
 `
+
+const SousContainer2 = styled.div`
+justify-content: space-around;
+width: 20%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 10px;
+padding: 1rem;
+text-align:center;
+a {
+    text-decoration: none;
+    color: #179E9F;
+}
+@media screen and (max-width: 880px) {
+    width: 85%;
+}
+img {
+    height: auto;
+}
+`
+
 const Button = styled.button`
 padding: 0.5rem;
 background-color:#179E9F ;
@@ -132,7 +166,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius : 30px;
-height: 170px;
+height: auto;
 
 
 

@@ -21,9 +21,9 @@ function ColorPage() {
         </div>
         <div>
           <Ul>
-            <Li><input type="radio"/>100€ à 250€ </Li>
-            <Li><input type="radio"/>250€ à 500€</Li>
-            <Li><input type="radio"/>500€ à 1000€</Li>
+      
+            <Li><input type="radio"/>100€ à 550€</Li>
+            <Li><input type="radio"/>550€ à 1000€</Li>
             <Li><input type="radio"/>+ de 1000€</Li>
           </Ul>
         </div>
