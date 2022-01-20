@@ -6,7 +6,7 @@ import {
 import React from 'react';
 import GlobalStyle from './globalStyle';
 import Header from './components/Header';
-import InsideOutsidePage from "./components/InsideOutsidePage";
+import HomePage from "./components/HomePage";
 import HouseRoomPage from "./components/HouseRoomPage";
 import ToDoPage from "./components/ToDoPage";
 
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<InsideOutsidePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/RoomChoice" element={<HouseRoomPage />} />
           <Route path="/ToDoPage" element={<ToDoPage />} />
         </Routes>

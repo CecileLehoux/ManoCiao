@@ -10,7 +10,7 @@ function ToDoPage() {
                 <h1>Que souhaitez-vous faire ?</h1>
             </TextHolder>
             <ChoicesContainer>
-                    <ChoiceHolder>
+                    <ChoiceHolder>   
                         <h3>#Rénovation</h3>
                         <IconHolder>
                             <img src='assets/PinceauIcone.png' alt='exterieur' width='65%' />
@@ -29,6 +29,25 @@ function ToDoPage() {
                         </IconHolder>
                     </ChoiceHolder>
             </ChoicesContainer>
+            <TextHolder>
+                <h1>De quel projet s'agit-il ?</h1>
+            </TextHolder>
+            <ChoicesContainer>
+                    <ChoiceHolder>
+                        <h3>Extérieur</h3>
+                        <IconHolder>
+                            <img src='assets/potExterieur.png' alt='exterieur' width='65%' />
+                        </IconHolder>
+                    </ChoiceHolder>
+                    <ChoiceHolder>
+                        <Link to={'/RoomChoice'} >
+                            <h3>Intérieur</h3>
+                            <IconHolder>
+                                <img src='assets/CanapeIcone.png' alt='interieur' width='75%' />
+                            </IconHolder>
+                        </Link>
+                    </ChoiceHolder>
+            </ChoicesContainer>
         </>
     )
 }
@@ -39,8 +58,8 @@ const TextHolder = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
 `
+
 const ChoicesContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -52,26 +71,30 @@ const ChoicesContainer = styled.div`
     padding: 1rem;
     padding-bottom: 2rem
 `
+
 const ChoiceHolder = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 30%;
     h3 {
         color: white;
         font-weight: bold;
-        font-size: x-large;
+        font-size: large;
+        text-align: center;
     }
     &:hover {
         transform: scale(1.1);
         transition: 0.3s;
     }
 `
+
 const IconHolder = styled.div`
     border-radius: 50%;
     background-color: white;
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +103,5 @@ const IconHolder = styled.div`
         padding: 5px;
     }
 `
-
 
 export default ToDoPage;
