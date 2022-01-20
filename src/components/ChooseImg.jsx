@@ -22,41 +22,41 @@ function ChooseImg() {
 
   return (
     <div>
-
       <TextHolder>
         <h1>Avez-vous une inspiration à nous partager ?</h1> <br />
         <h3>
           En fonction de votre photo, nous selectionnerons un panel de couleur
         </h3>
       </TextHolder>
-             <Container>
-      {!image && (
-        <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
-          <CarreBleu>
-            <LabelUpload htmlFor="image">
-              Télécharger votre photo
-              <UploadInput type="file" name="image" id="image"{...register("image")} />
-            </LabelUpload>
-            <br />
-        
-          <div>
-            <InputSubmit value="Envoyer" type="submit" />
-          </div>
-</CarreBleu>
-        </Form>
-      )}
-      {image && <ColorThief imageUrl={"/assets/" + image.name} />}
-      </TextHolder>
-        <h1>Je n'ai pas d'idée ?</h1>
-        </TextHolder>
-      <Link to="/CurrationPage">
-        <ButtonBg>
-    
-          je fais confiance à Mano Mano
-        </ButtonBg>
-      </Link>
-        </Container>
+      <Container>
+        {!image && (
+          <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
+            <CarreBleu>
+              <LabelUpload htmlFor="image">
+                Télécharger votre photo
+                <UploadInput
+                  type="file"
+                  name="image"
+                  id="image"
+                  {...register("image")}
+                />
+              </LabelUpload>
+              <br />
 
+              <div>
+                <InputSubmit value="Envoyer" type="submit" />
+              </div>
+            </CarreBleu>
+          </Form>
+        )}
+        {image && <ColorThief imageUrl={"/assets/" + image.name} />}
+        <TextHolder>
+          <h1>Je n'ai pas d'idée ?</h1>
+        </TextHolder>
+        <Link to="/CurrationPage">
+          <ButtonBg>je fais confiance à Mano Mano</ButtonBg>
+        </Link>
+      </Container>
     </div>
   );
 }
@@ -111,13 +111,11 @@ const Container = styled.div`
   }
 `;
 
-
 const Form = styled.form`
   padding: auto;
 `;
 
 const InputSubmit = styled.input`
-
   margin-top: 0px;
   margin-bottom: 5px;
 
