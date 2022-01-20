@@ -1,25 +1,24 @@
 import React from 'react';
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function ToDoPage() {
-
+    const [isFurnitureClicked, setIsFurnitureClicked] = useState(false)
+    console.log(isFurnitureClicked)
+    function handleFurnitureClick() {
+        setIsFurnitureClicked(!isFurnitureClicked)
+    }
     return (
         <>
             <TextHolder>
                 <h1>Que souhaitez-vous faire ?</h1>
             </TextHolder>
             <ChoicesContainer>
-                    <ChoiceHolder>   
+                    <ChoiceHolder onClick={handleFurnitureClick}>   
                         <h3>#Rénovation</h3>
                         <IconHolder>
                             <img src='assets/PinceauIcone.png' alt='exterieur' width='65%' />
-                        </IconHolder>
-                    </ChoiceHolder>
-                    <ChoiceHolder>
-                        <h3>#Réparation</h3>
-                        <IconHolder>
-                            <img src='assets/MarteauIcone.png' alt='interieur' width='75%' />
                         </IconHolder>
                     </ChoiceHolder>
                     <ChoiceHolder>
@@ -51,7 +50,12 @@ function ToDoPage() {
         </>
     )
 }
-
+//<ChoiceHolder>
+  //                      <h3>#Réparation</h3>
+    //                    <IconHolder>
+      //                      <img src='assets/MarteauIcone.png' alt='interieur' width='75%' />
+        //                </IconHolder>
+          //          </ChoiceHolder>
 const TextHolder = styled.div`
     display: flex;
     flex-direction: column;
@@ -79,7 +83,7 @@ const ChoiceHolder = styled.div`
     justify-content: space-around;
     width: 30%;
     h3 {
-        color: white;
+        color: ${isFurnitureClicked ? '#1e3c87' : 'white'};
         font-weight: bold;
         font-size: large;
         text-align: center;
@@ -87,6 +91,9 @@ const ChoiceHolder = styled.div`
     &:hover {
         transform: scale(1.1);
         transition: 0.3s;
+        }
+    &:hover h3 {
+        color: #1e3c87;
     }
 `
 
@@ -101,6 +108,11 @@ const IconHolder = styled.div`
     overflow: hidden;
     img {
         padding: 5px;
+    }
+    &:hover {
+        border: 3px solid #1e3c87;
+        transition: 0.3s;
+        
     }
 `
 
