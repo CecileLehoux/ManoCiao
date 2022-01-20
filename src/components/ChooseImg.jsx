@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import UploadImg from "../datas/uploadImg";
 import ColorThief from "./ColorThief";
 import styled from "styled-components";
@@ -20,7 +21,15 @@ function ChooseImg() {
   };
 
   return (
+
     <div>
+        <TextHolder>
+        <h1>Avez-vous une inspiration à nous partager ?</h1>
+        <h3>
+         En fonction de votre photo, nous selectionnerons un panel de couleur
+        </h3>
+      </TextHolder>
+      <Container>
       <Form onSubmit={handleSubmit(postImg)} encType="multipart/form-data">
         <div>
           <LabelUpload htmlFor="image">
@@ -38,8 +47,13 @@ function ChooseImg() {
         </div>
       </Form>
       {image && <ColorThief imageUrl={"/assets/"+image.name} />}
-    </div>
+    <Link to ="/CurrationPage">
+      <ButtonBg>Je n'ai pas d'idée, <br/>je fais confiance à Mano Mano</ButtonBg>
+    </Link>
+      </Container>
   );
+</div>
+  )
 }
 
 const UploadInput = styled.input`
@@ -47,10 +61,26 @@ const UploadInput = styled.input`
     width: 10rem;
     font-size: 0.8em;
     font-family: 'Roboto', sans-serif;
-`
+    outline-style: none;
+`;
+const Container = styled.div`
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  @media screen and (max-width: 880px) {
+    width: 90%;
+}
+`;
 
 const LabelUpload = styled.label`
     margin: auto;
+    margin-top: 2rem;
+    line-height: 2rem;
 `
 
 const Form = styled.form`
@@ -61,15 +91,56 @@ const InputSubmit = styled.input`
     margin: 1em auto;
     width: 10rem;
     color: white;
-    background-color: #1e3c87;
+    border: 0;
+    background-color: #179E9F ;
     border-radius: 10px;
-    box-shadow: 2px 3px 3px black;
     font-size: 1.3em;
+    padding: 1rem;
     font-family: 'Roboto', sans-serif;
     &:hover {
         transform: scale(1.1);
         transition: 0.3s;
     }
+    `
+
+  const TextHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: none;
+  font-size: 12px;
+`;
+
+const Button = styled.button`
+padding: 0.5rem;
+background-color:#179E9F ;
+border: 1px solid #fff; 
+color: #ffffff;
+border-radius:10px;
+font-size: 16px;
+margin-top: 1rem;
+&:hover {
+    background-color: #fff;
+    color:#179E9F ;
+    border: 1px solid #179E9F ;
+}
+`
+const ButtonBg = styled.button`
+padding: 0.5rem;
+background-color: #fff;
+    color:#179E9F ;
+    border: 1px solid #179E9F ;
+border-radius:10px;
+font-size: 16px;
+margin-top: 1rem;
+&:hover {
+    
+    background-color:#179E9F ;
+border: 1px solid #fff; 
+color: #ffffff;
+}
 `
 
 export default ChooseImg;
