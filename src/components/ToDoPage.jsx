@@ -91,14 +91,19 @@ const ArrowHolder = styled.div`
   }
 `;
 const TextHolder = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 2rem;
+    h1 {
+        margin-top: 3rem;
+    }
+
 `;
+
 
 const ChoicesContainer = styled.div`
   display: flex;

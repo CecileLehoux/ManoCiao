@@ -5,11 +5,7 @@ import styled from "styled-components";
 function ColorPage({image, principal, palette}) {
   return (
     <>
-      <Link to={'/CurrationPage'} >
-                <ArrowHolder>
-                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
-                </ArrowHolder>
-      </Link>
+
       <TextHolder>
         <h1>Un camaïeu de couleurs</h1>
         {image}

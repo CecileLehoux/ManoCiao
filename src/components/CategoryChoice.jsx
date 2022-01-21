@@ -73,6 +73,9 @@ const TextHolder = styled.div`
   align-items: center;
   padding: none;
   color:#179e9f;
+  h1 {
+    margin-top: 3rem;
+  }
 `;
 
 const ChoicesContainer = styled.div`
