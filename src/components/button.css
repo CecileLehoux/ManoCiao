@@ -8,11 +8,11 @@
   font-size: 16px;
   margin-top: 1rem;
 }
-  
+
 .choosenbutton:hover {
-   background-color: #179e9f;
-   border: 1px solid #fff;
-   color: #ffffff;
+  background-color: #179e9f;
+  border: 1px solid #fff;
+  color: #ffffff;
 }
 
 .clickedbutton {
@@ -24,4 +24,38 @@
   border-radius: 10px;
   font-size: 16px;
   margin-top: 1rem;
+}
+
+.iconHolder {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #179E9F;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.iconHolder img {
+  padding: 5px;
+}
+
+.iconHolder:hover {
+  border: 3px solid #1e3c87;
+  transition: 0.3s;
+}
+
+.iconHover {
+  border-radius: 50%;
+  background-color: white;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 3px solid #1e3c87;
+  transition: 0.3s;
 }
