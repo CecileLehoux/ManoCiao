@@ -111,6 +111,7 @@ const ColorContainer = styled.div`
     &::-webkit-color-swatch {
       padding: 0;
     }
+  }
 `;
 
 export default ColorPicker;

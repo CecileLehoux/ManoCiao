@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 const BathroomPage = () => {
   return (
-    <>
+    <> 
+    <Link to="/RoomChoice">
+         <ArrowHolder>
+                    <img src='assets/arrowReturn.jpg' alt='retour' width='75%' />
+                </ArrowHolder>
+                </Link>
       <TextHolder>
         <h1>Rénover votre Salle de bain</h1>
         <img
@@ -106,6 +111,23 @@ const TitleIcon = styled.h1`
   color: black;
   font-size: 14px;
   color: #179e9f;
+`;
+
+const ArrowHolder = styled.div`
+    border: solid 1px #179E9F;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 `;
 
 export default BathroomPage;
