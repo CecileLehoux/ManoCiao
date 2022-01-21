@@ -85,6 +85,9 @@ const TextHolder = styled.div`
     align-items: center;
     font-size: 13px;
     margin-top: 2rem;
+    h1 {
+        margin-top: 3rem;
+    }
 
 `
 

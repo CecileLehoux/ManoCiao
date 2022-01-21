@@ -166,6 +166,9 @@ const TextHolder = styled.div`
   align-items: center;
   padding: none;
   font-size: 12px;
+  h1{
+    margin-top: 3rem;
+  }
 `;
 
 const Button = styled.button`
